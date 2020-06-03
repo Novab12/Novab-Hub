@@ -24,6 +24,7 @@ local CloseNovabFrameC = Instance.new("TextButton")
 local TpandBringKill = Instance.new("TextButton")
 local CreditClose = Instance.new("TextButton")
 local HideGui = Instance.new("TextButton")
+local ChatLog = Instance.new("TextButton")
 local CloseYes = Instance.new("TextButton")
 local CloseNo = Instance.new("TextButton")
 local CreditTo = Instance.new("TextButton")
@@ -37,6 +38,7 @@ local NovabHub = Instance.new("TextLabel")
 local ChangeLog = Instance.new("TextLabel")
 local Text1 = Instance.new("TextLabel")
 local Text2 = Instance.new("TextLabel")
+local ChatLogText = Instance.new("TextLabel")
 local Intro = Instance.new("ImageLabel")
 local ImageXD = Instance.new("ImageLabel")
 
@@ -451,6 +453,19 @@ function TpandBring()
 	TpClickButton.TextWrapped = true
 	TpClickButton.Text = "CtrlClickTp"
 	
+	ChatLog.Name = "ChatLog"
+	ChatLog.Parent = TpandBringKillFrame
+	ChatLog.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	ChatLog.BackgroundTransparency = 0.259
+	ChatLog.BorderSizePixel = 0
+	ChatLog.Position = UDim2.new(0.6, 0, 0.673, 0)
+	ChatLog.Size = UDim2.new(0, 55, 0, 25)
+	ChatLog.Font = Enum.Font.SourceSans
+	ChatLog.TextSize = 14
+	ChatLog.TextTransparency = 0.259
+	ChatLog.TextWrapped = true
+	ChatLog.Text = "ChatLog"
+	
 	CloseGui.Name = "CloseGui"
 	CloseGui.Parent = TpandBringKillFrame
 	CloseGui.BackgroundTransparency = 1
@@ -482,7 +497,7 @@ function TpandBring()
 	TpText.BackgroundTransparency = 1
 	TpText.BorderSizePixel = 0
 	TpText.Position = UDim2.new(0.008, 0, 0.97, 0)
-	TpText.Size = UDim2.new(0, 100, 0, 10)
+	TpText.Size = UDim2.new(0, 130, 0, 10)
 	TpText.TextColor3 = Color3.fromRGB(255, 0, 0)
 	TpText.Font = Enum.Font.SourceSans
 	TpText.TextSize = 14
@@ -509,7 +524,7 @@ function TpandBring()
 	ClickTpText.Parent = Check
 	ClickTpText.BackgroundTransparency = 1
 	ClickTpText.BorderSizePixel = 0
-	ClickTpText.Position = UDim2.new(0.008, 0, 0.909, 0)
+	ClickTpText.Position = UDim2.new(0.008, 0, 0.91, 0)
 	ClickTpText.Size = UDim2.new(0, 130, 0, 10)
 	ClickTpText.TextColor3 = Color3.fromRGB(255, 0, 0)
 	ClickTpText.Font = Enum.Font.SourceSans
@@ -518,6 +533,20 @@ function TpandBring()
 	ClickTpText.TextWrapped = true
 	ClickTpText.TextXAlignment = Enum.TextXAlignment.Left
 	ClickTpText.Text = "CtrlClickTp is deactivated"
+	
+	ChatLogText.Name = "ChatLogText"
+	ChatLogText.Parent = Check
+	ChatLogText.BackgroundTransparency = 1
+	ChatLogText.BorderSizePixel = 0
+	ChatLogText.Position = UDim2.new(0.008, 0, 0.88, 0)
+	ChatLogText.Size = UDim2.new(0, 130, 0, 10)
+	ChatLogText.TextColor3 = Color3.fromRGB(255, 0, 0)
+	ChatLogText.Font = Enum.Font.SourceSans
+	ChatLogText.TextSize = 14
+	ChatLogText.TextTransparency = 0.259
+	ChatLogText.TextWrapped = true
+	ChatLogText.TextXAlignment = Enum.TextXAlignment.Left
+	ChatLogText.Text = "ChatLog is deactivated"
 	
 	PlayerName.Name = "PlayerName"
 	PlayerName.Parent = Check
@@ -540,9 +569,15 @@ function TpandBring()
 		Title = "Tp and BringKill";
 		Text = "Press P to show/hide gui.";
 	})
+	
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Tp and BringKill";
 		Text = "Tp and BringKill V1";
+	})
+	
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Tp and BringKill";
+		Text = "ChatLog work in Dev Console only";
 	})
 end
 
@@ -681,6 +716,26 @@ toggleGui = false
 Tptoggle = false
 Bringtoggle = false
 TpClicktoggle = false
+ChatLogtoggle = false
+
+function Output(Player, Message)
+	if not ChatLogtoggle then return end
+    print(Player.Name .. ": " .. Message)
+end
+
+for i,v in pairs(game.Players:GetChildren()) do
+    v.Chatted:Connect(function(Message)
+        Output(v, Message)
+    end)
+end
+ 
+game.Players.ChildAdded:Connect(function(Player)
+    if Player:IsA("Player") then
+        Player.Chatted:Connect(function(Message)
+            Output(Player, Message)
+        end)
+    end
+end)
 
 CreditTo.MouseButton1Down:connect(function()
 	Credit.Visible = true
@@ -831,6 +886,22 @@ function CloseClick()
 end
 
 CloseGui.MouseButton1Down:connect(CloseClick)
+
+function ChatLogging()
+	if ChatLogtoggle == false then
+        ChatLogtoggle = true
+        ChatLog.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+        ChatLogText.TextColor3 = Color3.fromRGB(0, 255, 0)
+        ChatLogText.Text = "ChatLog is activated"
+    else
+        ChatLogtoggle = false
+        ChatLog.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        ChatLogText.TextColor3 = Color3.fromRGB(255, 0, 0)
+        ChatLogText.Text = "ChatLog is deactivated"
+	end
+end
+
+ChatLog.MouseButton1Down:connect(ChatLogging)
 
 function onKeyPress(actionName, userInputState, inputObject)
     if userInputState == Enum.UserInputState.Begin then
