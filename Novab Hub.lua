@@ -725,7 +725,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Novab Hub";
-    Text = "Novab Hub(beta 0.0.1)";
+    Text = "Novab Hub (Beta 0.0.1)";
 })
 
 
@@ -740,3 +740,5 @@ while wait(0.1) do
 	PlayerName.TextColor3  = Color3.fromHSV(zigzag(counter), 1, 1)
 	counter = counter + 0.01
 end
+
+-- Credit to Timeless/xFunnieuss
