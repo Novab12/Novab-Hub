@@ -12,17 +12,26 @@ local ClickTpText = Instance.new("TextLabel")
 local PlayerName = Instance.new("TextLabel")
 local FrameGui = Instance.new("Frame")
 local TopFrameGui = Instance.new("Frame")
-local ScriptsFrame = Instance.new("ScrollingFrame")
 local ChangeFrame = Instance.new("Frame")
 local TopChangeFrame = Instance.new("Frame")
 local CloseNovabFrame = Instance.new("Frame")
+local Credit = Instance.new("Frame")
+local TopCredit = Instance.new("Frame")
 local CloseNovabTopFrame = Instance.new("Frame")
+local ScriptsFrame = Instance.new("ScrollingFrame")
 local CloseNovabGui = Instance.new("TextButton")
 local CloseNovabFrameC = Instance.new("TextButton")
 local TpandBringKill = Instance.new("TextButton")
+local CreditClose = Instance.new("TextButton")
 local HideGui = Instance.new("TextButton")
 local CloseYes = Instance.new("TextButton")
 local CloseNo = Instance.new("TextButton")
+local CreditTo = Instance.new("TextButton")
+local CreditText1 = Instance.new("TextLabel")
+local CreditText2 = Instance.new("TextLabel")
+local CreditText3 = Instance.new("TextLabel")
+local CreditText4 = Instance.new("TextLabel")
+local CreditText5 = Instance.new("TextLabel")
 local CloseText = Instance.new("TextLabel")
 local NovabHub = Instance.new("TextLabel")
 local ChangeLog = Instance.new("TextLabel")
@@ -186,6 +195,20 @@ Text2.TextWrapped = true
 Text2.TextXAlignment = Enum.TextXAlignment.Left
 Text2.Text = "   -- Add UI"
 
+CreditTo.Name = "CreditTo"
+CreditTo.Parent = FrameGui
+CreditTo.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+CreditTo.BackgroundTransparency = 0.359
+CreditTo.BorderSizePixel = 0
+CreditTo.Position = UDim2.new(0.1, 0, 0.85, 0)
+CreditTo.Size = UDim2.new(0, 50, 0, 25)
+CreditTo.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditTo.Font = Enum.Font.SourceSans
+CreditTo.TextSize = 18
+CreditTo.TextTransparency = 0.459
+CreditTo.TextWrapped = true
+CreditTo.Text = "Credit"
+
 CloseNovabGui.Name = "CloseNovabGui"
 CloseNovabGui.Parent = TopFrameGui
 CloseNovabGui.BackgroundTransparency = 1
@@ -251,6 +274,103 @@ CloseText.TextSize = 12
 CloseText.TextTransparency = 0.229
 CloseText.TextWrapped = true
 CloseText.Text = "Are you sure you want to close Novab Hub?"
+
+Credit.Name = "Credit"
+Credit.Parent = NovabScreenGui
+Credit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Credit.BackgroundTransparency = 0.159
+Credit.BorderSizePixel = 0
+Credit.Position = UDim2.new(0.182, 0, 0.476, 0)
+Credit.Size = UDim2.new(0, 130, 0, 150)
+Credit.Active = true
+Credit.Draggable = true
+Credit.Visible = false
+
+TopCredit.Name = "TopCredit"
+TopCredit.Parent = Credit
+TopCredit.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TopCredit.BackgroundTransparency = 0.259
+TopCredit.BorderSizePixel = 0
+TopCredit.Position = UDim2.new(0, 0, 0, 0)
+TopCredit.Size = UDim2.new(0, 130, 0, 20)
+
+CreditClose.Name = "CreditClose"
+CreditClose.Parent = TopCredit
+CreditClose.BackgroundTransparency = 1
+CreditClose.BorderSizePixel = 0
+CreditClose.Position = UDim2.new(0.846, 0, 0, 0)
+CreditClose.Size = UDim2.new(0, 20, 0, 20)
+CreditClose.TextColor3 = Color3.fromRGB(170, 0, 0)
+CreditClose.Font = Enum.Font.SourceSans
+CreditClose.TextSize = 18
+CreditClose.TextTransparency = 0.256
+CreditClose.TextWrapped = true
+CreditClose.Text = "X"
+
+CreditText1.Name = "CreditText1"
+CreditText1.Parent = Credit
+CreditText1.BackgroundTransparency = 1
+CreditText1.BorderSizePixel = 0
+CreditText1.Position = UDim2.new(-0.008, 0, 0.2, 0)
+CreditText1.Size = UDim2.new(0, 130, 0, 10)
+CreditText1.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText1.Font = Enum.Font.SourceSans
+CreditText1.TextSize = 14
+CreditText1.TextTransparency = 0.229
+CreditText1.TextWrapped = true
+CreditText1.Text = "Created By"
+
+CreditText2.Name = "CreditText2"
+CreditText2.Parent = Credit
+CreditText2.BackgroundTransparency = 1
+CreditText2.BorderSizePixel = 0
+CreditText2.Position = UDim2.new(-0.008, 0, 0.333, 0)
+CreditText2.Size = UDim2.new(0, 130, 0, 10)
+CreditText2.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText2.Font = Enum.Font.SourceSans
+CreditText2.TextSize = 14
+CreditText2.TextTransparency = 0.229
+CreditText2.TextWrapped = true
+CreditText2.Text = "Novab12_7"
+
+CreditText3.Name = "CreditText3"
+CreditText3.Parent = Credit
+CreditText3.BackgroundTransparency = 1
+CreditText3.BorderSizePixel = 0
+CreditText3.Position = UDim2.new(-0.008, 0, 0.467, 0)
+CreditText3.Size = UDim2.new(0, 130, 0, 10)
+CreditText3.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText3.Font = Enum.Font.SourceSans
+CreditText3.TextSize = 14
+CreditText3.TextTransparency = 0.229
+CreditText3.TextWrapped = true
+CreditText3.Text = "Credit to Reviz FE Admin"
+
+CreditText4.Name = "CreditText4"
+CreditText4.Parent = Credit
+CreditText4.BackgroundTransparency = 1
+CreditText4.BorderSizePixel = 0
+CreditText4.Position = UDim2.new(-0.008, 0, 0.6, 0)
+CreditText4.Size = UDim2.new(0, 130, 0, 10)
+CreditText4.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText4.Font = Enum.Font.SourceSans
+CreditText4.TextSize = 14
+CreditText4.TextTransparency = 0.229
+CreditText4.TextWrapped = true
+CreditText4.Text = "Thank you for pictures"
+
+CreditText5.Name = "CreditText5"
+CreditText5.Parent = Credit
+CreditText5.BackgroundTransparency = 1
+CreditText5.BorderSizePixel = 0
+CreditText5.Position = UDim2.new(-0.008, 0, 0.733, 0)
+CreditText5.Size = UDim2.new(0, 130, 0, 10)
+CreditText5.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditText5.Font = Enum.Font.SourceSans
+CreditText5.TextSize = 14
+CreditText5.TextTransparency = 0.229
+CreditText5.TextWrapped = true
+CreditText5.Text = "from pixabay.com"
 
 ImageXD.Name = "ImageXD"
 ImageXD.Parent = FrameGui
@@ -414,6 +534,8 @@ function TpandBring()
 	PlayerName.Text = "Name is"
 	
 	FrameGui.Visible = false
+	Credit.Visible = false
+	
     game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Tp and BringKill";
 		Text = "Press P to show/hide gui.";
@@ -426,6 +548,7 @@ end
 
 TpandBringKill.MouseButton1Down:connect(TpandBring)
 
+CreditTo.TextTransparency = 0.9
 ImageXD.ImageTransparency = 0.9
 NovabHub.TextStrokeTransparency = 0.9
 TpandBringKill.TextTransparency = 0.9
@@ -441,6 +564,7 @@ ScriptsFrame.BackgroundTransparency = 0.9
 TopFrameGui.BackgroundTransparency = 0.9
 FrameGui.BackgroundTransparency = 0.9
 wait(0.2)
+CreditTo.TextTransparency = 0.8
 ImageXD.ImageTransparency = 0.8
 NovabHub.TextStrokeTransparency = 0.2
 TpandBringKill.TextTransparency = 0.8
@@ -456,6 +580,7 @@ ScriptsFrame.BackgroundTransparency = 0.8
 TopFrameGui.BackgroundTransparency = 0.8
 FrameGui.BackgroundTransparency = 0.8
 wait(0.2)
+CreditTo.TextTransparency = 0.7
 ImageXD.ImageTransparency = 0.7
 NovabHub.TextStrokeTransparency = 0.3
 TpandBringKill.TextTransparency = 0.7
@@ -471,6 +596,7 @@ ScriptsFrame.BackgroundTransparency = 0.7
 TopFrameGui.BackgroundTransparency = 0.7
 FrameGui.BackgroundTransparency = 0.7
 wait(0.2)
+CreditTo.TextTransparency = 0.6
 ImageXD.ImageTransparency = 0.6
 NovabHub.TextStrokeTransparency = 0.4
 TpandBringKill.TextTransparency = 0.6
@@ -486,6 +612,7 @@ ScriptsFrame.BackgroundTransparency = 0.6
 TopFrameGui.BackgroundTransparency = 0.6
 FrameGui.BackgroundTransparency = 0.6
 wait(0.2)
+CreditTo.TextTransparency = 0.5
 ImageXD.ImageTransparency = 0.5
 NovabHub.TextStrokeTransparency = 0.5
 TpandBringKill.TextTransparency = 0.5
@@ -501,6 +628,7 @@ ScriptsFrame.BackgroundTransparency = 0.5
 TopFrameGui.BackgroundTransparency = 0.5
 FrameGui.BackgroundTransparency = 0.5
 wait(0.2)
+CreditTo.TextTransparency = 0.4
 ImageXD.ImageTransparency = 0.4
 NovabHub.TextStrokeTransparency = 0.556
 TpandBringKill.TextTransparency = 0.4
@@ -515,6 +643,7 @@ ScriptsFrame.BackgroundTransparency = 0.4
 TopFrameGui.BackgroundTransparency = 0.4
 FrameGui.BackgroundTransparency = 0.4
 wait(0.2)
+CreditTo.TextTransparency = 0.359
 ImageXD.ImageTransparency = 0.3
 TpandBringKill.TextTransparency = 0.356
 CloseNovabGui.TextTransparency = 0.3
@@ -552,6 +681,14 @@ toggleGui = false
 Tptoggle = false
 Bringtoggle = false
 TpClicktoggle = false
+
+CreditTo.MouseButton1Down:connect(function()
+	Credit.Visible = true
+end)
+
+CreditClose.MouseButton1Down:connect(function()
+	Credit.Visible = false
+end)
 
 HideGui.MouseButton1Down:connect(function()
 	TpandBringKillFrame.Visible = false
@@ -738,9 +875,6 @@ counter = 0
 while wait(0.1) do
 	NovabHub.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
 	PlayerName.TextColor3  = Color3.fromHSV(zigzag(counter), 1, 1)
+	CreditText2.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
 	counter = counter + 0.01
 end
-
--- Credit to Timeless/xFunnieuss
--- Credit to Reviz FE Admin
--- Thank you for pictures from https://pixabay.com/
