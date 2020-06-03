@@ -742,3 +742,4 @@ while wait(0.1) do
 end
 
 -- Credit to Timeless/xFunnieuss
+-- Thank you for pictures from https://pixabay.com/
