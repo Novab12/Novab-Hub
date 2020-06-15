@@ -39,7 +39,7 @@ function GetKey(NAME)
         workspace.CurrentCamera.CameraType = "Custom"
         wait(0.5)
         GSWorks.Vehicles[Car]:SetPrimaryPartCFrame(NOW)
-    end
+	end
 end
 
 function GetObject()
