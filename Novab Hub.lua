@@ -55,6 +55,14 @@ Intro.ImageTransparency = 0.135
 Intro:TweenPosition(UDim2.new(0.419, 0, 0.373, 0), "Out", "Elastic", 2)
 wait(0.2)
 Intro:TweenSize(UDim2.new(0, 128, 0, 128))
+n = 0
+while wait(0.01) do
+	n = n + 20
+	Intro.Rotation = n
+	if n == 180 then
+		break
+	end
+end
 wait(3.5)
 Intro:TweenSize(UDim2.new(0, 1, 0, 1))
 wait(0.25)
