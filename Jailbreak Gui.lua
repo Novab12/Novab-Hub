@@ -1,797 +1,721 @@
 local NovabScreenGui = Instance.new("ScreenGui")
-local Check = Instance.new("ScreenGui")
-local TpandBringKillFrame = Instance.new("Frame")
+local JailBreakGui = Instance.new("Frame")
+local TopJailBreakGui = Instance.new("Frame")
+local MicFrame = Instance.new("Frame")
+local TeleportFrame = Instance.new("Frame")
+local TeleportFrameTwo = Instance.new("Frame")
+local ScriptFrame = Instance.new("Frame")
+local SettingsFrame = Instance.new("Frame")
 local NameText = Instance.new("TextBox")
-local TpButton = Instance.new("TextButton")
-local BringKillButton = Instance.new("TextButton")
-local TpClickButton = Instance.new("TextButton")
-local CloseGui = Instance.new("TextButton")
-local TpText = Instance.new("TextLabel")
-local BringKillText = Instance.new("TextLabel")
-local ClickTpText = Instance.new("TextLabel")
-local PlayerName = Instance.new("TextLabel")
-local FrameGui = Instance.new("Frame")
-local TopFrameGui = Instance.new("Frame")
-local ChangeFrame = Instance.new("Frame")
-local TopChangeFrame = Instance.new("Frame")
-local CloseNovabFrame = Instance.new("Frame")
-local Credit = Instance.new("Frame")
-local TopCredit = Instance.new("Frame")
-local CloseNovabTopFrame = Instance.new("Frame")
-local ScriptsFrame = Instance.new("ScrollingFrame")
-local CloseNovabGui = Instance.new("TextButton")
-local CloseNovabFrameC = Instance.new("TextButton")
-local TpandBringKill = Instance.new("TextButton")
-local CreditClose = Instance.new("TextButton")
-local HideGui = Instance.new("TextButton")
-local ChatLog = Instance.new("TextButton")
-local CloseYes = Instance.new("TextButton")
-local CloseNo = Instance.new("TextButton")
-local CreditTo = Instance.new("TextButton")
-local CreditText1 = Instance.new("TextLabel")
-local CreditText2 = Instance.new("TextLabel")
-local CreditText3 = Instance.new("TextLabel")
-local CreditText4 = Instance.new("TextLabel")
-local CreditText5 = Instance.new("TextLabel")
-local CloseText = Instance.new("TextLabel")
-local NovabHub = Instance.new("TextLabel")
-local ChangeLog = Instance.new("TextLabel")
-local Text1 = Instance.new("TextLabel")
-local Text2 = Instance.new("TextLabel")
-local ChatLogText = Instance.new("TextLabel")
-local Intro = Instance.new("ImageLabel")
-local ImageXD = Instance.new("ImageLabel")
+local JetpackGive = Instance.new("TextButton")
+local MicButton = Instance.new("TextButton")
+local NowaitE = Instance.new("TextButton")
+local SelectTpOne = Instance.new("TextButton")
+local SelectTpTwo = Instance.new("TextButton")
+local GiveDonut = Instance.new("TextButton")
+local CloseJailBreakGui = Instance.new("TextButton")
+local HideJailBreakGui = Instance.new("TextButton")
+local TeleportPartOne = Instance.new("TextButton")
+local TeleportPartTwo = Instance.new("TextButton")
+local BankOutButton = Instance.new("TextButton")
+local BankInButton = Instance.new("TextButton")
+local JewOutButton = Instance.new("TextButton")
+local JewInButton = Instance.new("TextButton")
+local CityBaseButton = Instance.new("TextButton")
+local VolcanoBaseButton = Instance.new("TextButton")
+local PortButton = Instance.new("TextButton")
+local MuseumButton = Instance.new("TextButton")
+local PowerPlantButton = Instance.new("TextButton")
+local AirportButton = Instance.new("TextButton")
+local JetpackButton = Instance.new("TextButton")
+local GunShopButton = Instance.new("TextButton")
+local DonutShopButton = Instance.new("TextButton")
+local GasStationButton = Instance.new("TextButton")
+local CityGarageButton = Instance.new("TextButton")
+local SmallGarageButton = Instance.new("TextButton")
+local MilitaryButton = Instance.new("TextButton")
+local CityPoliceButton = Instance.new("TextButton")
+local JailPoliceButton = Instance.new("TextButton")
+local JailYardButton = Instance.new("TextButton")
+local BoatCaveButton = Instance.new("TextButton")
+local ServerButton = Instance.new("TextButton")
+local AirdropButton = Instance.new("TextButton")
+local Teleport = Instance.new("TextButton")
+local Main = Instance.new("TextButton")
+local Settings = Instance.new("ImageButton")
+local HowTp = Instance.new("TextLabel")
+local HomePart = Instance.new("TextLabel")
 
 NovabScreenGui.Name = "NovabScreenGui"
 NovabScreenGui.Parent = game:GetService("CoreGui")
 
-Intro.Name = "Intro"
-Intro.Parent = NovabScreenGui
-Intro.BackgroundTransparency = 1
-Intro.Position = UDim2.new(0, 0, 0, 0)
-Intro.Size = UDim2.new(0, 25, 0, 25)
-Intro.Image = "rbxassetid://5128971412"
-Intro.ImageTransparency = 0.135
-Intro:TweenPosition(UDim2.new(0.419, 0, 0.373, 0), "Out", "Elastic", 2)
-wait(0.2)
-Intro:TweenSize(UDim2.new(0, 128, 0, 128))
-n = 0
-while wait(0.01) do
-	n = n + 20
-	Intro.Rotation = n
-	if n == 180 then
-		break
-	end
-end
-wait(3.5)
-Intro:TweenSize(UDim2.new(0, 1, 0, 1))
-wait(0.25)
-Intro:TweenPosition(UDim2.new(0, 0, 2, 0), "Out", "Elastic", 2)
-wait(1.5)
-Intro:Destroy()
+JailBreakGui.Name = "JailBreakGui"
+JailBreakGui.Parent = NovabScreenGui
+JailBreakGui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+JailBreakGui.BackgroundTransparency = 0.159
+JailBreakGui.BorderSizePixel = 0
+JailBreakGui.Position = UDim2.new(0.214, 0, 0.214, 0)
+JailBreakGui.Size = UDim2.new(0, 350, 0, 250)
+JailBreakGui.Active = true
+JailBreakGui.Draggable = true
 
-FrameGui.Name = "FrameGui"
-FrameGui.Parent = NovabScreenGui
-FrameGui.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-FrameGui.BackgroundTransparency = 1
-FrameGui.BorderSizePixel = 0
-FrameGui.Position = UDim2.new(0, 0, 0.95, 0)
-FrameGui.Size = UDim2.new(0, 400, 0, 300)
-FrameGui.Active = true
-FrameGui.Draggable = true
-FrameGui:TweenPosition(UDim2.new(0.373, 0, 0.373, 0), "Out", "Elastic", 4)
+TopJailBreakGui.Name = "TopJailBreakGui"
+TopJailBreakGui.Parent = JailBreakGui
+TopJailBreakGui.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TopJailBreakGui.BackgroundTransparency = 0.099
+TopJailBreakGui.BorderSizePixel = 0
+TopJailBreakGui.Position = UDim2.new(0, 0, 0, 0)
+TopJailBreakGui.Size = UDim2.new(0, 350, 0, 30)
 
-TopFrameGui.Name = "TopFrameGui"
-TopFrameGui.Parent = FrameGui
-TopFrameGui.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-TopFrameGui.BackgroundTransparency = 1
-TopFrameGui.BorderSizePixel = 0
-TopFrameGui.Position = UDim2.new(0, 0, 0, 0)
-TopFrameGui.Size = UDim2.new(0, 400, 0, 30)
+TeleportFrame.Name = "TeleportFrame"
+TeleportFrame.Parent = JailBreakGui
+TeleportFrame.BackgroundTransparency = 1
+TeleportFrame.BorderSizePixel = 0
+TeleportFrame.Position = UDim2.new(0.343, 0, 0.262, 0)
+TeleportFrame.Size = UDim2.new(0, 230, 0, 185)
+TeleportFrame.Visible = false
 
-CloseNovabFrame.Name = "CloseNovabFrame"
-CloseNovabFrame.Parent = NovabScreenGui
-CloseNovabFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-CloseNovabFrame.BackgroundTransparency = 0.36
-CloseNovabFrame.BorderSizePixel = 0
-CloseNovabFrame.Position = UDim2.new(0.373, 0, 0.4, 0)
-CloseNovabFrame.Size = UDim2.new(0, 200, 0, 110)
-CloseNovabFrame.Active = true
-CloseNovabFrame.Draggable = true
-CloseNovabFrame.Visible = false
+TeleportFrameTwo.Name = "TeleportFrameTwo"
+TeleportFrameTwo.Parent = JailBreakGui
+TeleportFrameTwo.BackgroundTransparency = 1
+TeleportFrameTwo.BorderSizePixel = 0
+TeleportFrameTwo.Position = UDim2.new(0.343, 0, 0.262, 0)
+TeleportFrameTwo.Size = UDim2.new(0, 230, 0, 185)
+TeleportFrameTwo.Visible = false
 
-CloseNovabTopFrame.Name = "CloseNovabTopFrame"
-CloseNovabTopFrame.Parent = CloseNovabFrame
-CloseNovabTopFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-CloseNovabTopFrame.BackgroundTransparency = 0.259
-CloseNovabTopFrame.BorderSizePixel = 0
-CloseNovabTopFrame.Position = UDim2.new(-0.002, 0, -0.002, 0)
-CloseNovabTopFrame.Size = UDim2.new(0, 200, 0, 25)
+MicFrame.Name = "MicFrame"
+MicFrame.Parent = JailBreakGui
+MicFrame.BackgroundTransparency = 1
+MicFrame.BorderSizePixel = 0
+MicFrame.Position = UDim2.new(0.343, 0, 0.262, 0)
+MicFrame.Size = UDim2.new(0, 230, 0, 185)
+MicFrame.Visible = false
 
-ScriptsFrame.Name = "ScriptsFrame"
-ScriptsFrame.Parent = FrameGui
-ScriptsFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-ScriptsFrame.BorderColor3 = Color3.fromRGB(12, 12, 12)
-ScriptsFrame.BackgroundTransparency = 1
-ScriptsFrame.BorderSizePixel = 3
-ScriptsFrame.Position = UDim2.new(0.1, 0, 0.2, 0)
-ScriptsFrame.Size = UDim2.new(0, 200, 0, 180)
-ScriptsFrame.CanvasSize = UDim2.new(0, 0, 10, 0)
+SettingsFrame.Name = "SettingsFrame"
+SettingsFrame.Parent = JailBreakGui
+SettingsFrame.BackgroundTransparency = 1
+SettingsFrame.BorderSizePixel = 0
+SettingsFrame.Position = UDim2.new(0.343, 0, 0.262, 0)
+SettingsFrame.Size = UDim2.new(0, 230, 0, 185)
+SettingsFrame.Visible = false
 
-ChangeFrame.Name = "ChangeFrame"
-ChangeFrame.Parent = FrameGui
-ChangeFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-ChangeFrame.BackgroundTransparency = 1
-ChangeFrame.BorderSizePixel = 0
-ChangeFrame.Position = UDim2.new(0.63, 0, 0.55, 0)
-ChangeFrame.Size = UDim2.new(0, 130, 0, 104)
+ScriptFrame.Name = "ScriptFrame"
+ScriptFrame.Parent = JailBreakGui
+ScriptFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ScriptFrame.BackgroundTransparency = 0.259
+ScriptFrame.BorderSizePixel = 3
+ScriptFrame.BorderColor3 = Color3.fromRGB(12, 12, 12)
+ScriptFrame.BorderMode = "Inset"
+ScriptFrame.Position = UDim2.new(0, 0, 0.12, 0)
+ScriptFrame.Size = UDim2.new(0, 120, 0, 220)
 
-TopChangeFrame.Name = "TopChangeFrame"
-TopChangeFrame.Parent = ChangeFrame
-TopChangeFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-TopChangeFrame.BackgroundTransparency = 1
-TopChangeFrame.BorderSizePixel = 0
-TopChangeFrame.Position = UDim2.new(0, 0, 0, 0)
-TopChangeFrame.Size = UDim2.new(0, 130, 0, 15)
+MicButton.Name = "MicButton"
+MicButton.Parent = ScriptFrame
+MicButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MicButton.BackgroundTransparency = 0.156
+MicButton.BorderSizePixel = 2
+MicButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+MicButton.Position = UDim2.new(0.08, 0, 0.409, 0)
+MicButton.Size = UDim2.new(0, 95, 0, 25)
+MicButton.Font = Enum.Font.SourceSans
+MicButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MicButton.TextSize = 16
+MicButton.TextTransparency = 0.169
+MicButton.TextWrapped = true
+MicButton.Text = "Misc"
 
-TpandBringKill.Name = "TpandBringKill"
-TpandBringKill.Parent = ScriptsFrame
-TpandBringKill.BackgroundColor3 = Color3.fromRGB(111, 111, 111)
-TpandBringKill.BackgroundTransparency = 1
-TpandBringKill.BorderColor3 = Color3.fromRGB(65, 65, 65)
-TpandBringKill.BorderSizePixel = 3
-TpandBringKill.Position = UDim2.new(0.11, 0, 0.005, 0)
-TpandBringKill.TextColor3 = Color3.fromRGB(255, 255, 255)
-TpandBringKill.Size = UDim2.new(0, 150, 0, 30)
-TpandBringKill.Font = Enum.Font.SourceSans
-TpandBringKill.TextSize = 18
-TpandBringKill.TextTransparency = 0.356
-TpandBringKill.TextWrapped = true
-TpandBringKill.Text = "Tp and BringKill"
+Teleport.Name = "Teleport"
+Teleport.Parent = ScriptFrame
+Teleport.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Teleport.BackgroundTransparency = 0.156
+Teleport.BorderSizePixel = 2
+Teleport.BorderColor3 = Color3.fromRGB(65, 65, 65)
+Teleport.Position = UDim2.new(0.08, 0, 0.227, 0)
+Teleport.Size = UDim2.new(0, 95, 0, 25)
+Teleport.Font = Enum.Font.SourceSans
+Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teleport.TextSize = 16
+Teleport.TextTransparency = 0.169
+Teleport.TextWrapped = true
+Teleport.Text = "Teleport"
 
-NovabHub.Name = "NovabHub"
-NovabHub.Parent = TopFrameGui
-NovabHub.BackgroundTransparency = 1
-NovabHub.BorderSizePixel = 0
-NovabHub.Position = UDim2.new(0, 0, 0, 0)
-NovabHub.Size = UDim2.new(0, 214, 0, 30)
-NovabHub.Font = Enum.Font.SourceSans
-NovabHub.TextColor3 = Color3.fromHSV(255, 1, 1)
-NovabHub.TextSize = 28
-NovabHub.TextTransparency = 1
-NovabHub.TextStrokeTransparency = 0
-NovabHub.TextXAlignment = Enum.TextXAlignment.Left
-NovabHub.TextWrapped = true
-NovabHub.Text = "   Novab Hub"
+Main.Name = "Main"
+Main.Parent = ScriptFrame
+Main.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Main.BackgroundTransparency = 0.156
+Main.BorderSizePixel = 2
+Main.BorderColor3 = Color3.fromRGB(65, 65, 65)
+Main.Position = UDim2.new(0.08, 0, 0.048, 0)
+Main.Size = UDim2.new(0, 95, 0, 25)
+Main.Font = Enum.Font.SourceSans
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextSize = 16
+Main.TextTransparency = 0.169
+Main.TextWrapped = true
+Main.Text = "Main"
 
-ChangeLog.Name = "ChangeLog"
-ChangeLog.Parent = ChangeFrame
-ChangeLog.BackgroundTransparency = 1
-ChangeLog.BorderSizePixel = 0
-ChangeLog.Position = UDim2.new(0, 0, 0, 0)
-ChangeLog.Size = UDim2.new(0, 130, 0, 10)
-ChangeLog.TextColor3 = Color3.fromRGB(255, 255, 255)
-ChangeLog.Font = Enum.Font.SourceSans
-ChangeLog.TextSize = 18
-ChangeLog.TextTransparency = 1
-ChangeLog.TextWrapped = true
-ChangeLog.Text = "Change Log"
+NowaitE.Name = "NowaitE"
+NowaitE.Parent = MicFrame
+NowaitE.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NowaitE.BackgroundTransparency = 0.156
+NowaitE.BorderSizePixel = 1
+NowaitE.BorderColor3 = Color3.fromRGB(65, 65, 65)
+NowaitE.Position = UDim2.new(0.05, 0, 0.1, 0)
+NowaitE.Size = UDim2.new(0, 60, 0, 25)
+NowaitE.Font = Enum.Font.SourceSans
+NowaitE.TextColor3 = Color3.fromRGB(255, 255, 255)
+NowaitE.TextSize = 14
+NowaitE.TextTransparency = 0.169
+NowaitE.TextWrapped = true
+NowaitE.Text = "No wait E"
 
-Text1.Name = "Text1"
-Text1.Parent = ChangeLog
-Text1.BackgroundTransparency = 1
-Text1.BorderSizePixel = 0
-Text1.Position = UDim2.new(0, 0, 2, 0)
-Text1.Size = UDim2.new(0, 130, 0, 10)
-Text1.Font = Enum.Font.SourceSans
-Text1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text1.TextSize = 14
-Text1.TextTransparency = 1
-Text1.TextWrapped = true
-Text1.TextXAlignment = Enum.TextXAlignment.Left
-Text1.Text = "   -- Add Tp and BringKill"
+GiveDonut.Name = "GiveDonut"
+GiveDonut.Parent = MicFrame
+GiveDonut.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GiveDonut.BackgroundTransparency = 0.156
+GiveDonut.BorderSizePixel = 1
+GiveDonut.BorderColor3 = Color3.fromRGB(65, 65, 65)
+GiveDonut.Position = UDim2.new(0.38, 0, 0.1, 0)
+GiveDonut.Size = UDim2.new(0, 60, 0, 25)
+GiveDonut.Font = Enum.Font.SourceSans
+GiveDonut.TextColor3 = Color3.fromRGB(255, 255, 255)
+GiveDonut.TextSize = 14
+GiveDonut.TextTransparency = 0.169
+GiveDonut.TextWrapped = true
+GiveDonut.Text = "Give Donut"
 
-Text2.Name = "Text2"
-Text2.Parent = ChangeLog
-Text2.BackgroundTransparency = 1
-Text2.BorderSizePixel = 0
-Text2.Position = UDim2.new(0, 0, 3, 0)
-Text2.Size = UDim2.new(0, 130, 0, 10)
-Text2.Font = Enum.Font.SourceSans
-Text2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Text2.TextSize = 14
-Text2.TextTransparency = 1
-Text2.TextWrapped = true
-Text2.TextXAlignment = Enum.TextXAlignment.Left
-Text2.Text = "   -- Add UI"
+JetpackGive.Name = "JetpackGive"
+JetpackGive.Parent = MicFrame
+JetpackGive.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JetpackGive.BackgroundTransparency = 0.156
+JetpackGive.BorderSizePixel = 1
+JetpackGive.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JetpackGive.Position = UDim2.new(0.704, 0, 0.1, 0)
+JetpackGive.Size = UDim2.new(0, 60, 0, 25)
+JetpackGive.Font = Enum.Font.SourceSans
+JetpackGive.TextColor3 = Color3.fromRGB(255, 255, 255)
+JetpackGive.TextSize = 12
+JetpackGive.TextTransparency = 0.169
+JetpackGive.TextWrapped = true
+JetpackGive.Text = "Give Jetpack"
 
-CreditTo.Name = "CreditTo"
-CreditTo.Parent = FrameGui
-CreditTo.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-CreditTo.BackgroundTransparency = 0.359
-CreditTo.BorderSizePixel = 0
-CreditTo.Position = UDim2.new(0.1, 0, 0.85, 0)
-CreditTo.Size = UDim2.new(0, 50, 0, 25)
-CreditTo.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditTo.Font = Enum.Font.SourceSans
-CreditTo.TextSize = 18
-CreditTo.TextTransparency = 0.459
-CreditTo.TextWrapped = true
-CreditTo.Text = "Credit"
+BankOutButton.Name = "BankOutButton"
+BankOutButton.Parent = TeleportFrame
+BankOutButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BankOutButton.BackgroundTransparency = 0.156
+BankOutButton.BorderSizePixel = 1
+BankOutButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+BankOutButton.Position = UDim2.new(0.05, 0, 0.1, 0)
+BankOutButton.Size = UDim2.new(0, 60, 0, 25)
+BankOutButton.Font = Enum.Font.SourceSans
+BankOutButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BankOutButton.TextSize = 14
+BankOutButton.TextTransparency = 0.169
+BankOutButton.TextWrapped = true
+BankOutButton.Text = "BankOut"
 
-CloseNovabGui.Name = "CloseNovabGui"
-CloseNovabGui.Parent = TopFrameGui
-CloseNovabGui.BackgroundTransparency = 1
-CloseNovabGui.Position = UDim2.new(0, 375, 0.15, 0)
-CloseNovabGui.Size = UDim2.new(0, 20, 0, 20)
-CloseNovabGui.TextColor3 = Color3.fromRGB(170, 0, 0)
-CloseNovabGui.Font = Enum.Font.SourceSans
-CloseNovabGui.TextSize = 24
-CloseNovabGui.TextTransparency = 1
-CloseNovabGui.TextWrapped = true
-CloseNovabGui.TextScaled = true
-CloseNovabGui.Text = "X"
+BankInButton.Name = "BankInButton"
+BankInButton.Parent = TeleportFrame
+BankInButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BankInButton.BackgroundTransparency = 0.156
+BankInButton.BorderSizePixel = 1
+BankInButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+BankInButton.Position = UDim2.new(0.38, 0, 0.1, 0)
+BankInButton.Size = UDim2.new(0, 60, 0, 25)
+BankInButton.Font = Enum.Font.SourceSans
+BankInButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BankInButton.TextSize = 14
+BankInButton.TextTransparency = 0.169
+BankInButton.TextWrapped = true
+BankInButton.Text = "BankIn"
 
-CloseYes.Name = "CloseYes"
-CloseYes.Parent = CloseNovabFrame
-CloseYes.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-CloseYes.BorderColor3 = Color3.fromRGB(0, 170, 0)
-CloseYes.BackgroundTransparency = 0.159
-CloseYes.BorderSizePixel = 3
-CloseYes.Position = UDim2.new(0.128, 0, 0.62, 0)
-CloseYes.Size = UDim2.new(0, 50, 0, 25)
-CloseYes.Font = Enum.Font.SourceSans
-CloseYes.TextSize = 16
-CloseYes.TextTransparency = 0.259
-CloseYes.TextWrapped = true
-CloseYes.Text = "Yes!"
+JewOutButton.Name = "JewOutButton"
+JewOutButton.Parent = TeleportFrame
+JewOutButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JewOutButton.BackgroundTransparency = 0.156
+JewOutButton.BorderSizePixel = 1
+JewOutButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JewOutButton.Position = UDim2.new(0.704, 0, 0.1, 0)
+JewOutButton.Size = UDim2.new(0, 60, 0, 25)
+JewOutButton.Font = Enum.Font.SourceSans
+JewOutButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JewOutButton.TextSize = 14
+JewOutButton.TextTransparency = 0.169
+JewOutButton.TextWrapped = true
+JewOutButton.Text = "JewOut"
 
-CloseNo.Name = "CloseNo"
-CloseNo.Parent = CloseNovabFrame
-CloseNo.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-CloseNo.BorderColor3 = Color3.fromRGB(170, 0, 0)
-CloseNo.BackgroundTransparency = 0.159
-CloseNo.BorderSizePixel = 3
-CloseNo.Position = UDim2.new(0.623, 0, 0.62, 0)
-CloseNo.Size = UDim2.new(0, 50, 0, 25)
-CloseNo.Font = Enum.Font.SourceSans
-CloseNo.TextSize = 16
-CloseNo.TextTransparency = 0.259
-CloseNo.TextWrapped = true
-CloseNo.Text = "No!"
+JewInButton.Name = "JewInButton"
+JewInButton.Parent = TeleportFrame
+JewInButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JewInButton.BackgroundTransparency = 0.156
+JewInButton.BorderSizePixel = 1
+JewInButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JewInButton.Position = UDim2.new(0.05, 0, 0.307, 0)
+JewInButton.Size = UDim2.new(0, 60, 0, 25)
+JewInButton.Font = Enum.Font.SourceSans
+JewInButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JewInButton.TextSize = 14
+JewInButton.TextTransparency = 0.169
+JewInButton.TextWrapped = true
+JewInButton.Text = "JewIn"
 
-CloseNovabFrameC.Name = "CloseNovabFrameC"
-CloseNovabFrameC.Parent = CloseNovabTopFrame
-CloseNovabFrameC.BackgroundTransparency = 1
-CloseNovabFrameC.BorderSizePixel = 0
-CloseNovabFrameC.Position = UDim2.new(0.875, 0, 0, 0)
-CloseNovabFrameC.Size = UDim2.new(0, 25, 0, 25)
-CloseNovabFrameC.Font = Enum.Font.SourceSans
-CloseNovabFrameC.TextColor3 = Color3.fromRGB(152, 0, 0)
-CloseNovabFrameC.TextSize = 18
-CloseNovabFrameC.TextWrapped = true
-CloseNovabFrameC.Text = "X"
+CityBaseButton.Name = "CityBaseButton"
+CityBaseButton.Parent = TeleportFrame
+CityBaseButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CityBaseButton.BackgroundTransparency = 0.156
+CityBaseButton.BorderSizePixel = 1
+CityBaseButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+CityBaseButton.Position = UDim2.new(0.38, 0, 0.307, 0)
+CityBaseButton.Size = UDim2.new(0, 60, 0, 25)
+CityBaseButton.Font = Enum.Font.SourceSans
+CityBaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CityBaseButton.TextSize = 14
+CityBaseButton.TextTransparency = 0.169
+CityBaseButton.TextWrapped = true
+CityBaseButton.Text = "CityBase"
 
-CloseText.Name = "CloseText"
-CloseText.Parent = CloseNovabFrame
-CloseText.BackgroundTransparency = 1
-CloseText.BorderSizePixel = 0
-CloseText.Position = UDim2.new(0.02, 0, 0.218, 0)
-CloseText.Size = UDim2.new(0, 192, 0, 30)
-CloseText.TextColor3 = Color3.fromRGB(255, 255, 255)
-CloseText.Font = Enum.Font.SourceSans
-CloseText.TextSize = 12
-CloseText.TextTransparency = 0.229
-CloseText.TextWrapped = true
-CloseText.Text = "Are you sure you want to close Novab Hub?"
+VolcanoBaseButton.Name = "VolcanoBaseButton"
+VolcanoBaseButton.Parent = TeleportFrame
+VolcanoBaseButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+VolcanoBaseButton.BackgroundTransparency = 0.156
+VolcanoBaseButton.BorderSizePixel = 1
+VolcanoBaseButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+VolcanoBaseButton.Position = UDim2.new(0.704, 0, 0.307, 0)
+VolcanoBaseButton.Size = UDim2.new(0, 60, 0, 25)
+VolcanoBaseButton.Font = Enum.Font.SourceSans
+VolcanoBaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+VolcanoBaseButton.TextSize = 12
+VolcanoBaseButton.TextTransparency = 0.169
+VolcanoBaseButton.TextWrapped = true
+VolcanoBaseButton.Text = "VolcanoBase"
 
-Credit.Name = "Credit"
-Credit.Parent = NovabScreenGui
-Credit.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Credit.BackgroundTransparency = 0.159
-Credit.BorderSizePixel = 0
-Credit.Position = UDim2.new(0.182, 0, 0.476, 0)
-Credit.Size = UDim2.new(0, 130, 0, 150)
-Credit.Active = true
-Credit.Draggable = true
-Credit.Visible = false
+PortButton.Name = "PortButton"
+PortButton.Parent = TeleportFrame
+PortButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+PortButton.BackgroundTransparency = 0.156
+PortButton.BorderSizePixel = 1
+PortButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+PortButton.Position = UDim2.new(0.05, 0, 0.527, 0)
+PortButton.Size = UDim2.new(0, 60, 0, 25)
+PortButton.Font = Enum.Font.SourceSans
+PortButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PortButton.TextSize = 14
+PortButton.TextTransparency = 0.169
+PortButton.TextWrapped = true
+PortButton.Text = "Port"
 
-TopCredit.Name = "TopCredit"
-TopCredit.Parent = Credit
-TopCredit.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-TopCredit.BackgroundTransparency = 0.259
-TopCredit.BorderSizePixel = 0
-TopCredit.Position = UDim2.new(0, 0, 0, 0)
-TopCredit.Size = UDim2.new(0, 130, 0, 20)
+MuseumButton.Name = "MuseumButton"
+MuseumButton.Parent = TeleportFrame
+MuseumButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MuseumButton.BackgroundTransparency = 0.156
+MuseumButton.BorderSizePixel = 1
+MuseumButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+MuseumButton.Position = UDim2.new(0.38, 0, 0.527, 0)
+MuseumButton.Size = UDim2.new(0, 60, 0, 25)
+MuseumButton.Font = Enum.Font.SourceSans
+MuseumButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MuseumButton.TextSize = 14
+MuseumButton.TextTransparency = 0.169
+MuseumButton.TextWrapped = true
+MuseumButton.Text = "Museum"
 
-CreditClose.Name = "CreditClose"
-CreditClose.Parent = TopCredit
-CreditClose.BackgroundTransparency = 1
-CreditClose.BorderSizePixel = 0
-CreditClose.Position = UDim2.new(0.846, 0, 0, 0)
-CreditClose.Size = UDim2.new(0, 20, 0, 20)
-CreditClose.TextColor3 = Color3.fromRGB(170, 0, 0)
-CreditClose.Font = Enum.Font.SourceSans
-CreditClose.TextSize = 18
-CreditClose.TextTransparency = 0.256
-CreditClose.TextWrapped = true
-CreditClose.Text = "X"
+PowerPlantButton.Name = "PowerPlantButton"
+PowerPlantButton.Parent = TeleportFrame
+PowerPlantButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+PowerPlantButton.BackgroundTransparency = 0.156
+PowerPlantButton.BorderSizePixel = 1
+PowerPlantButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+PowerPlantButton.Position = UDim2.new(0.704, 0, 0.527, 0)
+PowerPlantButton.Size = UDim2.new(0, 60, 0, 25)
+PowerPlantButton.Font = Enum.Font.SourceSans
+PowerPlantButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+PowerPlantButton.TextSize = 14
+PowerPlantButton.TextTransparency = 0.169
+PowerPlantButton.TextWrapped = true
+PowerPlantButton.Text = "PowerPlant"
 
-CreditText1.Name = "CreditText1"
-CreditText1.Parent = Credit
-CreditText1.BackgroundTransparency = 1
-CreditText1.BorderSizePixel = 0
-CreditText1.Position = UDim2.new(-0.008, 0, 0.2, 0)
-CreditText1.Size = UDim2.new(0, 130, 0, 10)
-CreditText1.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditText1.Font = Enum.Font.SourceSans
-CreditText1.TextSize = 14
-CreditText1.TextTransparency = 0.229
-CreditText1.TextWrapped = true
-CreditText1.Text = "Created By"
+AirportButton.Name = "AirportButton"
+AirportButton.Parent = TeleportFrame
+AirportButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AirportButton.BackgroundTransparency = 0.156
+AirportButton.BorderSizePixel = 1
+AirportButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+AirportButton.Position = UDim2.new(0.05, 0, 0.755, 0)
+AirportButton.Size = UDim2.new(0, 60, 0, 25)
+AirportButton.Font = Enum.Font.SourceSans
+AirportButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AirportButton.TextSize = 14
+AirportButton.TextTransparency = 0.169
+AirportButton.TextWrapped = true
+AirportButton.Text = "Airport"
 
-CreditText2.Name = "CreditText2"
-CreditText2.Parent = Credit
-CreditText2.BackgroundTransparency = 1
-CreditText2.BorderSizePixel = 0
-CreditText2.Position = UDim2.new(-0.008, 0, 0.333, 0)
-CreditText2.Size = UDim2.new(0, 130, 0, 10)
-CreditText2.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditText2.Font = Enum.Font.SourceSans
-CreditText2.TextSize = 14
-CreditText2.TextTransparency = 0.229
-CreditText2.TextWrapped = true
-CreditText2.Text = "Novab12_7"
+JetpackButton.Name = "JetpackButton"
+JetpackButton.Parent = TeleportFrame
+JetpackButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JetpackButton.BackgroundTransparency = 0.156
+JetpackButton.BorderSizePixel = 1
+JetpackButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JetpackButton.Position = UDim2.new(0.38, 0, 0.755, 0)
+JetpackButton.Size = UDim2.new(0, 60, 0, 25)
+JetpackButton.Font = Enum.Font.SourceSans
+JetpackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JetpackButton.TextSize = 14
+JetpackButton.TextTransparency = 0.169
+JetpackButton.TextWrapped = true
+JetpackButton.Text = "Jetpack"
 
-CreditText3.Name = "CreditText3"
-CreditText3.Parent = Credit
-CreditText3.BackgroundTransparency = 1
-CreditText3.BorderSizePixel = 0
-CreditText3.Position = UDim2.new(-0.008, 0, 0.467, 0)
-CreditText3.Size = UDim2.new(0, 130, 0, 10)
-CreditText3.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditText3.Font = Enum.Font.SourceSans
-CreditText3.TextSize = 14
-CreditText3.TextTransparency = 0.229
-CreditText3.TextWrapped = true
-CreditText3.Text = "Credit to Reviz FE Admin"
+GunShopButton.Name = "GunShopButton"
+GunShopButton.Parent = TeleportFrame
+GunShopButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GunShopButton.BackgroundTransparency = 0.156
+GunShopButton.BorderSizePixel = 1
+GunShopButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+GunShopButton.Position = UDim2.new(0.704, 0, 0.755, 0)
+GunShopButton.Size = UDim2.new(0, 60, 0, 25)
+GunShopButton.Font = Enum.Font.SourceSans
+GunShopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+GunShopButton.TextSize = 14
+GunShopButton.TextTransparency = 0.169
+GunShopButton.TextWrapped = true
+GunShopButton.Text = "GunShop"
 
-CreditText4.Name = "CreditText4"
-CreditText4.Parent = Credit
-CreditText4.BackgroundTransparency = 1
-CreditText4.BorderSizePixel = 0
-CreditText4.Position = UDim2.new(-0.008, 0, 0.6, 0)
-CreditText4.Size = UDim2.new(0, 130, 0, 10)
-CreditText4.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditText4.Font = Enum.Font.SourceSans
-CreditText4.TextSize = 14
-CreditText4.TextTransparency = 0.229
-CreditText4.TextWrapped = true
-CreditText4.Text = "Thank you for pictures"
+DonutShopButton.Name = "DonutShopButton"
+DonutShopButton.Parent = TeleportFrameTwo
+DonutShopButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+DonutShopButton.BackgroundTransparency = 0.156
+DonutShopButton.BorderSizePixel = 1
+DonutShopButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+DonutShopButton.Position = UDim2.new(0.05, 0, 0.1, 0)
+DonutShopButton.Size = UDim2.new(0, 60, 0, 25)
+DonutShopButton.Font = Enum.Font.SourceSans
+DonutShopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+DonutShopButton.TextSize = 14
+DonutShopButton.TextTransparency = 0.169
+DonutShopButton.TextWrapped = true
+DonutShopButton.Text = "DonutShop"
 
-CreditText5.Name = "CreditText5"
-CreditText5.Parent = Credit
-CreditText5.BackgroundTransparency = 1
-CreditText5.BorderSizePixel = 0
-CreditText5.Position = UDim2.new(-0.008, 0, 0.733, 0)
-CreditText5.Size = UDim2.new(0, 130, 0, 10)
-CreditText5.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditText5.Font = Enum.Font.SourceSans
-CreditText5.TextSize = 14
-CreditText5.TextTransparency = 0.229
-CreditText5.TextWrapped = true
-CreditText5.Text = "from pixabay.com"
+GasStationButton.Name = "GasStationButton"
+GasStationButton.Parent = TeleportFrameTwo
+GasStationButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+GasStationButton.BackgroundTransparency = 0.156
+GasStationButton.BorderSizePixel = 1
+GasStationButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+GasStationButton.Position = UDim2.new(0.38, 0, 0.1, 0)
+GasStationButton.Size = UDim2.new(0, 60, 0, 25)
+GasStationButton.Font = Enum.Font.SourceSans
+GasStationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+GasStationButton.TextSize = 14
+GasStationButton.TextTransparency = 0.169
+GasStationButton.TextWrapped = true
+GasStationButton.Text = "GasStation"
 
-ImageXD.Name = "ImageXD"
-ImageXD.Parent = FrameGui
-ImageXD.BackgroundTransparency = 1
-ImageXD.Position = UDim2.new(0.67, 0, 0.15, 0)
-ImageXD.Size = UDim2.new(0, 100, 0, 100)
-ImageXD.Image = "rbxassetid://5128971412"
-ImageXD.ImageTransparency = 0.099
+CityGarageButton.Name = "CityGarageButton"
+CityGarageButton.Parent = TeleportFrameTwo
+CityGarageButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CityGarageButton.BackgroundTransparency = 0.156
+CityGarageButton.BorderSizePixel = 1
+CityGarageButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+CityGarageButton.Position = UDim2.new(0.704, 0, 0.1, 0)
+CityGarageButton.Size = UDim2.new(0, 60, 0, 25)
+CityGarageButton.Font = Enum.Font.SourceSans
+CityGarageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CityGarageButton.TextSize = 14
+CityGarageButton.TextTransparency = 0.169
+CityGarageButton.TextWrapped = true
+CityGarageButton.Text = "CityGarage"
 
-function TpandBring()
-	Check.Name = "Check"
-	Check.Parent = NovabScreenGui
-	
-	TpandBringKillFrame.Name = "TpandBringKillFrame"
-	TpandBringKillFrame.Parent = NovabScreenGui
-	TpandBringKillFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	TpandBringKillFrame.BackgroundTransparency = 0.329
-	TpandBringKillFrame.BorderColor3 = Color3.fromRGB(22, 22, 22)
-	TpandBringKillFrame.BorderSizePixel = 5
-	TpandBringKillFrame.Position = UDim2.new(0.35, 0, 0.35, 0)
-	TpandBringKillFrame.Size = UDim2.new(0, 200, 0, 150)
-	TpandBringKillFrame.Active = true
-	TpandBringKillFrame.Draggable = true
-	
-	NameText.Name = "NameText"
-	NameText.Parent = TpandBringKillFrame
-	NameText.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-	NameText.BackgroundTransparency = 0.259
-	NameText.BorderColor3 = Color3.fromRGB(172, 172, 172)
-	NameText.BorderSizePixel = 2
-	NameText.Position = UDim2.new(0.102, 0, 0.11, 0)
-	NameText.Size = UDim2.new(0, 150, 0, 30)
-	NameText.TextColor3 = Color3.fromRGB(255, 255, 255)
-	NameText.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
-	NameText.PlaceholderText = "Enter a Name"
-	NameText.Font = Enum.Font.SourceSans
-	NameText.TextSize = 18
-	NameText.TextTransparency = 0.195
-	NameText.TextWrapped = true
-	NameText.Text = ""
-	
-	TpButton.Name = "TpButton"
-	TpButton.Parent = TpandBringKillFrame
-	TpButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	TpButton.BackgroundTransparency = 0.259
-	TpButton.BorderSizePixel = 0
-	TpButton.Position = UDim2.new(0.1, 0, 0.407, 0)
-	TpButton.Size = UDim2.new(0, 55, 0, 25)
-	TpButton.Font = Enum.Font.SourceSans
-	TpButton.TextSize = 18
-	TpButton.TextTransparency = 0.259
-	TpButton.TextWrapped = true
-	TpButton.Text = "Tp"
-	
-	BringKillButton.Name = "BringKillButton"
-	BringKillButton.Parent = TpandBringKillFrame
-	BringKillButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	BringKillButton.BackgroundTransparency = 0.259
-	BringKillButton.BorderSizePixel = 0
-	BringKillButton.Position = UDim2.new(0.6, 0, 0.407, 0)
-	BringKillButton.Size = UDim2.new(0, 55, 0, 25)
-	BringKillButton.Font = Enum.Font.SourceSans
-	BringKillButton.TextSize = 18
-	BringKillButton.TextTransparency = 0.259
-	BringKillButton.TextWrapped = true
-	BringKillButton.Text = "BringKill"
-	
-	TpClickButton.Name = "TpClickButton"
-	TpClickButton.Parent = TpandBringKillFrame
-	TpClickButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	TpClickButton.BackgroundTransparency = 0.259
-	TpClickButton.BorderSizePixel = 0
-	TpClickButton.Position = UDim2.new(0.1, 0, 0.673, 0)
-	TpClickButton.Size = UDim2.new(0, 55, 0, 25)
-	TpClickButton.Font = Enum.Font.SourceSans
-	TpClickButton.TextSize = 14
-	TpClickButton.TextTransparency = 0.259
-	TpClickButton.TextWrapped = true
-	TpClickButton.Text = "CtrlClickTp"
-	
-	ChatLog.Name = "ChatLog"
-	ChatLog.Parent = TpandBringKillFrame
-	ChatLog.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-	ChatLog.BackgroundTransparency = 0.259
-	ChatLog.BorderSizePixel = 0
-	ChatLog.Position = UDim2.new(0.6, 0, 0.673, 0)
-	ChatLog.Size = UDim2.new(0, 55, 0, 25)
-	ChatLog.Font = Enum.Font.SourceSans
-	ChatLog.TextSize = 14
-	ChatLog.TextTransparency = 0.259
-	ChatLog.TextWrapped = true
-	ChatLog.Text = "ChatLog"
-	
-	CloseGui.Name = "CloseGui"
-	CloseGui.Parent = TpandBringKillFrame
-	CloseGui.BackgroundTransparency = 1
-	CloseGui.BorderSizePixel = 0
-	CloseGui.Position = UDim2.new(0.925, 0, 0, 0)
-	CloseGui.Size = UDim2.new(0, 15, 0, 15)
-	CloseGui.TextColor3 = Color3.fromRGB(255, 255, 255)
-	CloseGui.Font = Enum.Font.SourceSans
-	CloseGui.TextSize = 18
-	CloseGui.TextTransparency = 0.459
-	CloseGui.TextWrapped = true
-	CloseGui.Text = "X"
-	
-	HideGui.Name = "HideGui"
-	HideGui.Parent = TpandBringKillFrame
-	HideGui.BackgroundTransparency = 1
-	HideGui.BorderSizePixel = 0
-	HideGui.Position = UDim2.new(0.85, 0, 0, 0)
-	HideGui.Size = UDim2.new(0, 15, 0, 15)
-	HideGui.TextColor3 = Color3.fromRGB(255, 255, 255)
-	HideGui.Font = Enum.Font.SourceSans
-	HideGui.TextSize = 18
-	HideGui.TextTransparency = 0.459
-	HideGui.TextWrapped = true
-	HideGui.Text = "-"
-	
-	TpText.Name = "TpText"
-	TpText.Parent = Check
-	TpText.BackgroundTransparency = 1
-	TpText.BorderSizePixel = 0
-	TpText.Position = UDim2.new(0.008, 0, 0.97, 0)
-	TpText.Size = UDim2.new(0, 130, 0, 10)
-	TpText.TextColor3 = Color3.fromRGB(255, 0, 0)
-	TpText.Font = Enum.Font.SourceSans
-	TpText.TextSize = 14
-	TpText.TextTransparency = 0.259
-	TpText.TextWrapped = true
-	TpText.TextXAlignment = Enum.TextXAlignment.Left
-	TpText.Text = "Tp is  is deactivated"
-	
-	BringKillText.Name = "BringKillText"
-	BringKillText.Parent = Check
-	BringKillText.BackgroundTransparency = 1
-	BringKillText.BorderSizePixel = 0
-	BringKillText.Position = UDim2.new(0.008, 0, 0.94, 0)
-	BringKillText.Size = UDim2.new(0, 130, 0, 10)
-	BringKillText.TextColor3 = Color3.fromRGB(255, 0, 0)
-	BringKillText.Font = Enum.Font.SourceSans
-	BringKillText.TextSize = 14
-	BringKillText.TextTransparency = 0.259
-	BringKillText.TextWrapped = true
-	BringKillText.TextXAlignment = Enum.TextXAlignment.Left
-	BringKillText.Text = "BringKill is  is deactivated"
-	
-	ClickTpText.Name = "ClickTpText"
-	ClickTpText.Parent = Check
-	ClickTpText.BackgroundTransparency = 1
-	ClickTpText.BorderSizePixel = 0
-	ClickTpText.Position = UDim2.new(0.008, 0, 0.91, 0)
-	ClickTpText.Size = UDim2.new(0, 130, 0, 10)
-	ClickTpText.TextColor3 = Color3.fromRGB(255, 0, 0)
-	ClickTpText.Font = Enum.Font.SourceSans
-	ClickTpText.TextSize = 14
-	ClickTpText.TextTransparency = 0.259
-	ClickTpText.TextWrapped = true
-	ClickTpText.TextXAlignment = Enum.TextXAlignment.Left
-	ClickTpText.Text = "CtrlClickTp is deactivated"
-	
-	ChatLogText.Name = "ChatLogText"
-	ChatLogText.Parent = Check
-	ChatLogText.BackgroundTransparency = 1
-	ChatLogText.BorderSizePixel = 0
-	ChatLogText.Position = UDim2.new(0.008, 0, 0.88, 0)
-	ChatLogText.Size = UDim2.new(0, 130, 0, 10)
-	ChatLogText.TextColor3 = Color3.fromRGB(255, 0, 0)
-	ChatLogText.Font = Enum.Font.SourceSans
-	ChatLogText.TextSize = 14
-	ChatLogText.TextTransparency = 0.259
-	ChatLogText.TextWrapped = true
-	ChatLogText.TextXAlignment = Enum.TextXAlignment.Left
-	ChatLogText.Text = "ChatLog is deactivated"
-	
-	PlayerName.Name = "PlayerName"
-	PlayerName.Parent = Check
-	PlayerName.BackgroundTransparency = 1
-	PlayerName.BorderSizePixel = 0
-	PlayerName.Position = UDim2.new(0.008, 0, 0.799, 0)
-	PlayerName.Size = UDim2.new(0, 155, 0, 25)
-	PlayerName.TextColor3 = Color3.fromRGB(255, 0, 0)
-	PlayerName.Font = Enum.Font.SourceSans
-	PlayerName.TextSize = 14
-	PlayerName.TextTransparency = 0.259
-	PlayerName.TextWrapped = true
-	PlayerName.TextXAlignment = Enum.TextXAlignment.Left
-	PlayerName.Text = "Name is"
-	
-	FrameGui.Visible = false
-	Credit.Visible = false
-	
-    game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "Tp and BringKill";
-		Text = "Press P to show/hide gui.";
-	})
-	
-	game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "Tp and BringKill";
-		Text = "Tp and BringKill V1";
-	})
-	
-	game:GetService("StarterGui"):SetCore("SendNotification", {
-		Title = "Tp and BringKill";
-		Text = "ChatLog work in Dev Console only";
-	})
-end
+SmallGarageButton.Name = "SmallGarageButton"
+SmallGarageButton.Parent = TeleportFrameTwo
+SmallGarageButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SmallGarageButton.BackgroundTransparency = 0.156
+SmallGarageButton.BorderSizePixel = 1
+SmallGarageButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+SmallGarageButton.Position = UDim2.new(0.05, 0, 0.307, 0)
+SmallGarageButton.Size = UDim2.new(0, 60, 0, 25)
+SmallGarageButton.Font = Enum.Font.SourceSans
+SmallGarageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SmallGarageButton.TextSize = 14
+SmallGarageButton.TextTransparency = 0.169
+SmallGarageButton.TextWrapped = true
+SmallGarageButton.Text = "SmallGarage"
 
-TpandBringKill.MouseButton1Down:connect(TpandBring)
+MilitaryButton.Name = "MilitaryBaseButton"
+MilitaryButton.Parent = TeleportFrameTwo
+MilitaryButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MilitaryButton.BackgroundTransparency = 0.156
+MilitaryButton.BorderSizePixel = 1
+MilitaryButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+MilitaryButton.Position = UDim2.new(0.38, 0, 0.307, 0)
+MilitaryButton.Size = UDim2.new(0, 60, 0, 25)
+MilitaryButton.Font = Enum.Font.SourceSans
+MilitaryButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MilitaryButton.TextSize = 14
+MilitaryButton.TextTransparency = 0.169
+MilitaryButton.TextWrapped = true
+MilitaryButton.Text = "Military"
 
-CreditTo.TextTransparency = 0.9
-ImageXD.ImageTransparency = 0.9
-NovabHub.TextStrokeTransparency = 0.9
-TpandBringKill.TextTransparency = 0.9
-CloseNovabGui.TextTransparency = 0.9
-Text2.TextTransparency = 0.9
-Text1.TextTransparency = 0.9
-ChangeLog.TextTransparency = 0.9
-NovabHub.TextTransparency = 0.9
-TpandBringKill.BackgroundTransparency = 0.9
-TopChangeFrame.BackgroundTransparency = 0.9
-ChangeFrame.BackgroundTransparency = 0.9
-ScriptsFrame.BackgroundTransparency = 0.9
-TopFrameGui.BackgroundTransparency = 0.9
-FrameGui.BackgroundTransparency = 0.9
-wait(0.2)
-CreditTo.TextTransparency = 0.8
-ImageXD.ImageTransparency = 0.8
-NovabHub.TextStrokeTransparency = 0.2
-TpandBringKill.TextTransparency = 0.8
-CloseNovabGui.TextTransparency = 0.8
-Text2.TextTransparency = 0.8
-Text1.TextTransparency = 0.8
-ChangeLog.TextTransparency = 0.8
-NovabHub.TextTransparency = 0.8
-TpandBringKill.BackgroundTransparency = 0.8
-TopChangeFrame.BackgroundTransparency = 0.8
-ChangeFrame.BackgroundTransparency = 0.8
-ScriptsFrame.BackgroundTransparency = 0.8
-TopFrameGui.BackgroundTransparency = 0.8
-FrameGui.BackgroundTransparency = 0.8
-wait(0.2)
-CreditTo.TextTransparency = 0.7
-ImageXD.ImageTransparency = 0.7
-NovabHub.TextStrokeTransparency = 0.3
-TpandBringKill.TextTransparency = 0.7
-CloseNovabGui.TextTransparency = 0.7
-Text2.TextTransparency = 0.7
-Text1.TextTransparency = 0.7
-ChangeLog.TextTransparency = 0.7
-NovabHub.TextTransparency = 0.7
-TpandBringKill.BackgroundTransparency = 0.7
-TopChangeFrame.BackgroundTransparency = 0.7
-ChangeFrame.BackgroundTransparency = 0.7
-ScriptsFrame.BackgroundTransparency = 0.7
-TopFrameGui.BackgroundTransparency = 0.7
-FrameGui.BackgroundTransparency = 0.7
-wait(0.2)
-CreditTo.TextTransparency = 0.6
-ImageXD.ImageTransparency = 0.6
-NovabHub.TextStrokeTransparency = 0.4
-TpandBringKill.TextTransparency = 0.6
-CloseNovabGui.TextTransparency = 0.6
-Text2.TextTransparency = 0.6
-Text1.TextTransparency = 0.6
-ChangeLog.TextTransparency = 0.6
-NovabHub.TextTransparency = 0.6
-TpandBringKill.BackgroundTransparency = 0.6
-TopChangeFrame.BackgroundTransparency = 0.6
-ChangeFrame.BackgroundTransparency = 0.6
-ScriptsFrame.BackgroundTransparency = 0.6
-TopFrameGui.BackgroundTransparency = 0.6
-FrameGui.BackgroundTransparency = 0.6
-wait(0.2)
-CreditTo.TextTransparency = 0.5
-ImageXD.ImageTransparency = 0.5
-NovabHub.TextStrokeTransparency = 0.5
-TpandBringKill.TextTransparency = 0.5
-CloseNovabGui.TextTransparency = 0.5
-Text2.TextTransparency = 0.5
-Text1.TextTransparency = 0.5
-ChangeLog.TextTransparency = 0.5
-NovabHub.TextTransparency = 0.5
-TpandBringKill.BackgroundTransparency = 0.5
-TopChangeFrame.BackgroundTransparency = 0.56
-ChangeFrame.BackgroundTransparency = 0.5
-ScriptsFrame.BackgroundTransparency = 0.5
-TopFrameGui.BackgroundTransparency = 0.5
-FrameGui.BackgroundTransparency = 0.5
-wait(0.2)
-CreditTo.TextTransparency = 0.4
-ImageXD.ImageTransparency = 0.4
-NovabHub.TextStrokeTransparency = 0.556
-TpandBringKill.TextTransparency = 0.4
-CloseNovabGui.TextTransparency = 0.4
-Text2.TextTransparency = 0.4
-Text1.TextTransparency = 0.4
-ChangeLog.TextTransparency = 0.4
-NovabHub.TextTransparency = 0.4
-TpandBringKill.BackgroundTransparency = 0.4
-ChangeFrame.BackgroundTransparency = 0.4
-ScriptsFrame.BackgroundTransparency = 0.4
-TopFrameGui.BackgroundTransparency = 0.4
-FrameGui.BackgroundTransparency = 0.4
-wait(0.2)
-CreditTo.TextTransparency = 0.359
-ImageXD.ImageTransparency = 0.3
-TpandBringKill.TextTransparency = 0.356
-CloseNovabGui.TextTransparency = 0.3
-Text2.TextTransparency = 0.359
-Text1.TextTransparency = 0.359
-ChangeLog.TextTransparency = 0.359
-NovabHub.TextTransparency = 0.3
-TpandBringKill.BackgroundTransparency = 0.3
-ChangeFrame.BackgroundTransparency = 0.359
-ScriptsFrame.BackgroundTransparency = 0.3
-TopFrameGui.BackgroundTransparency = 0.3
-FrameGui.BackgroundTransparency = 0.3
-wait(0.2)
-ImageXD.ImageTransparency = 0.2
-CloseNovabGui.TextTransparency = 0.256
-NovabHub.TextTransparency = 0.259
-TpandBringKill.BackgroundTransparency = 0.2
-ScriptsFrame.BackgroundTransparency = 0.259
-TopFrameGui.BackgroundTransparency = 0.2
-wait(0.2)
-ImageXD.ImageTransparency = 0.135
-TpandBringKill.BackgroundTransparency = 0.129
-TopFrameGui.BackgroundTransparency = 0.1
-FrameGui.BackgroundTransparency = 0.27
-wait(0.2)
-TopFrameGui.BackgroundTransparency = 0.099
-FrameGui.BackgroundTransparency = 0.259
+CityPoliceButton.Name = "CityPoliceButton"
+CityPoliceButton.Parent = TeleportFrameTwo
+CityPoliceButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+CityPoliceButton.BackgroundTransparency = 0.156
+CityPoliceButton.BorderSizePixel = 1
+CityPoliceButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+CityPoliceButton.Position = UDim2.new(0.704, 0, 0.307, 0)
+CityPoliceButton.Size = UDim2.new(0, 60, 0, 25)
+CityPoliceButton.Font = Enum.Font.SourceSans
+CityPoliceButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CityPoliceButton.TextSize = 14
+CityPoliceButton.TextTransparency = 0.169
+CityPoliceButton.TextWrapped = true
+CityPoliceButton.Text = "CityPolice"
 
+JailPoliceButton.Name = "JailPoliceButton"
+JailPoliceButton.Parent = TeleportFrameTwo
+JailPoliceButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JailPoliceButton.BackgroundTransparency = 0.156
+JailPoliceButton.BorderSizePixel = 1
+JailPoliceButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JailPoliceButton.Position = UDim2.new(0.05, 0, 0.527, 0)
+JailPoliceButton.Size = UDim2.new(0, 60, 0, 25)
+JailPoliceButton.Font = Enum.Font.SourceSans
+JailPoliceButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JailPoliceButton.TextSize = 14
+JailPoliceButton.TextTransparency = 0.169
+JailPoliceButton.TextWrapped = true
+JailPoliceButton.Text = "JailPolice"
+
+JailYardButton.Name = "JailYardButton"
+JailYardButton.Parent = TeleportFrameTwo
+JailYardButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+JailYardButton.BackgroundTransparency = 0.156
+JailYardButton.BorderSizePixel = 1
+JailYardButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+JailYardButton.Position = UDim2.new(0.38, 0, 0.527, 0)
+JailYardButton.Size = UDim2.new(0, 60, 0, 25)
+JailYardButton.Font = Enum.Font.SourceSans
+JailYardButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JailYardButton.TextSize = 14
+JailYardButton.TextTransparency = 0.169
+JailYardButton.TextWrapped = true
+JailYardButton.Text = "JailYard"
+
+BoatCaveButton.Name = "BoatCaveButton"
+BoatCaveButton.Parent = TeleportFrameTwo
+BoatCaveButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BoatCaveButton.BackgroundTransparency = 0.156
+BoatCaveButton.BorderSizePixel = 1
+BoatCaveButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+BoatCaveButton.Position = UDim2.new(0.704, 0, 0.527, 0)
+BoatCaveButton.Size = UDim2.new(0, 60, 0, 25)
+BoatCaveButton.Font = Enum.Font.SourceSans
+BoatCaveButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoatCaveButton.TextSize = 14
+BoatCaveButton.TextTransparency = 0.169
+BoatCaveButton.TextWrapped = true
+BoatCaveButton.Text = "BoatCave"
+
+ServerButton.Name = "ServerButton"
+ServerButton.Parent = TeleportFrameTwo
+ServerButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ServerButton.BackgroundTransparency = 0.156
+ServerButton.BorderSizePixel = 1
+ServerButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+ServerButton.Position = UDim2.new(0.05, 0, 0.755, 0)
+ServerButton.Size = UDim2.new(0, 60, 0, 25)
+ServerButton.Font = Enum.Font.SourceSans
+ServerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ServerButton.TextSize = 14
+ServerButton.TextTransparency = 0.169
+ServerButton.TextWrapped = true
+ServerButton.Text = "Server"
+
+AirdropButton.Name = "AirdropButton"
+AirdropButton.Parent = TeleportFrameTwo
+AirdropButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+AirdropButton.BackgroundTransparency = 0.156
+AirdropButton.BorderSizePixel = 1
+AirdropButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
+AirdropButton.Position = UDim2.new(0.38, 0, 0.755, 0)
+AirdropButton.Size = UDim2.new(0, 60, 0, 25)
+AirdropButton.Font = Enum.Font.SourceSans
+AirdropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AirdropButton.TextSize = 14
+AirdropButton.TextTransparency = 0.169
+AirdropButton.TextWrapped = true
+AirdropButton.Text = "Airdrop"
+
+NameText.Name = "NameText"
+NameText.Parent = TeleportFrameTwo
+NameText.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+NameText.BackgroundTransparency = 0.156
+NameText.BorderSizePixel = 1
+NameText.BorderColor3 = Color3.fromRGB(65, 65, 65)
+NameText.Position = UDim2.new(0.704, 0, 0.755, 0)
+NameText.Size = UDim2.new(0, 60, 0, 25)
+NameText.Font = Enum.Font.SourceSans
+NameText.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameText.TextSize = 12
+NameText.TextTransparency = 0.169
+NameText.TextWrapped = true
+NameText.PlaceholderColor3 = Color3.fromRGB(170, 170, 170)
+NameText.PlaceholderText = "Enter a Name"
+NameText.Text = ""
+
+TeleportPartOne.Name = "TeleportPartOne"
+TeleportPartOne.Parent = TeleportFrameTwo
+TeleportPartOne.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TeleportPartOne.BackgroundTransparency = 0.156
+TeleportPartOne.BorderSizePixel = 0
+TeleportPartOne.Position = UDim2.new(0.73, 0, -0.1, 0)
+TeleportPartOne.Size = UDim2.new(0, 20, 0, 20)
+TeleportPartOne.Font = Enum.Font.SourceSans
+TeleportPartOne.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportPartOne.TextSize = 20
+TeleportPartOne.TextTransparency = 0.169
+TeleportPartOne.TextWrapped = true
+TeleportPartOne.Text = "< "
+TeleportPartOne.Visible = false
+
+TeleportPartTwo.Name = "TeleportPartTwo"
+TeleportPartTwo.Parent = TeleportFrame
+TeleportPartTwo.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TeleportPartTwo.BackgroundTransparency = 0.156
+TeleportPartTwo.BorderSizePixel = 0
+TeleportPartTwo.Position = UDim2.new(0.87, 0, -0.1, 0)
+TeleportPartTwo.Size = UDim2.new(0, 20, 0, 20)
+TeleportPartTwo.Font = Enum.Font.SourceSans
+TeleportPartTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
+TeleportPartTwo.TextSize = 20
+TeleportPartTwo.TextTransparency = 0.169
+TeleportPartTwo.TextWrapped = true
+TeleportPartTwo.Text = " >"
+TeleportPartTwo.Visible = false
+
+HowTp.Name = "HowTp"
+HowTp.Parent = JailBreakGui
+HowTp.BackgroundTransparency = 1
+HowTp.BorderSizePixel = 0
+HowTp.Position = UDim2.new(0.40, 0, 0.15, 0)
+HowTp.Size = UDim2.new(0, 65, 0, 40)
+HowTp.Font = Enum.Font.SourceSans
+HowTp.TextColor3 = Color3.fromHSV(255, 1, 1)
+HowTp.TextSize = 16
+HowTp.TextTransparency = 0.169
+HowTp.TextWrapped = true
+HowTp.Text = "No  selection"
+HowTp.Visible = false
+
+SelectTpOne.Name = "SelectTpOne"
+SelectTpOne.Parent = JailBreakGui
+SelectTpOne.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SelectTpOne.BackgroundTransparency = 0.356
+SelectTpOne.BorderSizePixel = 1
+SelectTpOne.BorderColor3 = Color3.fromRGB(65, 65, 65)
+SelectTpOne.Position = UDim2.new(0.65, 0, 0.20, 0)
+SelectTpOne.Size = UDim2.new(0, 15, 0, 15)
+SelectTpOne.Font = Enum.Font.SourceSans
+SelectTpOne.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelectTpOne.TextSize = 14
+SelectTpOne.TextTransparency = 1
+SelectTpOne.TextWrapped = true
+SelectTpOne.Text = "1"
+SelectTpOne.Visible = false
+
+SelectTpTwo.Name = "SelectTpTwo"
+SelectTpTwo.Parent = JailBreakGui
+SelectTpTwo.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SelectTpTwo.BackgroundTransparency = 0.356
+SelectTpTwo.BorderSizePixel = 1
+SelectTpTwo.BorderColor3 = Color3.fromRGB(65, 65, 65)
+SelectTpTwo.Position = UDim2.new(0.75, 0, 0.20, 0)
+SelectTpTwo.Size = UDim2.new(0, 15, 0, 15)
+SelectTpTwo.Font = Enum.Font.SourceSans
+SelectTpTwo.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelectTpTwo.TextSize = 14
+SelectTpTwo.TextTransparency = 1
+SelectTpTwo.TextWrapped = true
+SelectTpTwo.Text = "2"
+SelectTpTwo.Visible = false
+
+CloseJailBreakGui.Name = "CloseJailBreakGui"
+CloseJailBreakGui.Parent = TopJailBreakGui
+CloseJailBreakGui.BackgroundTransparency = 1
+CloseJailBreakGui.BorderSizePixel = 0
+CloseJailBreakGui.Position = UDim2.new(0.926, 0, 0.067, 0)
+CloseJailBreakGui.Size = UDim2.new(0, 25, 0, 25)
+CloseJailBreakGui.Font = Enum.Font.SourceSans
+CloseJailBreakGui.TextColor3 = Color3.fromRGB(145, 145, 145)
+CloseJailBreakGui.TextSize = 18
+CloseJailBreakGui.TextWrapped = true
+CloseJailBreakGui.Text = "X"
+
+HideJailBreakGui.Name = "HideJailBreakGui"
+HideJailBreakGui.Parent = TopJailBreakGui
+HideJailBreakGui.BackgroundTransparency = 1
+HideJailBreakGui.BorderSizePixel = 0
+HideJailBreakGui.Position = UDim2.new(0.875, 0, -0.11, 0)
+HideJailBreakGui.Size = UDim2.new(0, 25, 0, 25)
+HideJailBreakGui.Font = Enum.Font.SourceSans
+HideJailBreakGui.TextColor3 = Color3.fromRGB(145, 145, 145)
+HideJailBreakGui.TextSize = 18
+HideJailBreakGui.TextWrapped = true
+HideJailBreakGui.Text = "_"
+
+Settings.Name = "Settings"
+Settings.Parent = ScriptFrame
+Settings.BackgroundTransparency = 1
+Settings.BorderSizePixel = 0
+Settings.Position = UDim2.new(0.05, 0, 0.88, 0)
+Settings.Size = UDim2.new(0, 20, 0, 20)
+Settings.Image = "rbxassetid://5170972949"
+Settings.ImageTransparency = 0.29
+
+HomePart.Name = "HomePart"
+HomePart.Parent = TopJailBreakGui
+HomePart.BackgroundTransparency = 1
+HomePart.BorderSizePixel = 0
+HomePart.Position = UDim2.new(0, 0, 0, 0)
+HomePart.Size = UDim2.new(0, 300, 0, 30)
+HomePart.TextColor3 = Color3.fromHSV(255, 1, 1)
+HomePart.Font = Enum.Font.SourceSans
+HomePart.TextSize = 20
+HomePart.TextTransparency = 0.229
+HomePart.TextWrapped = true
+HomePart.Text = "   JailBreak Gui"
+HomePart.TextXAlignment = Enum.TextXAlignment.Left
+
+TpMethod1Toggle = false
+TpMethod2Toggle = false
+toggleGui = false
+SettingsToggle = false
 
 Players = game:GetService("Players")
-Lplayer = Players.LocalPlayer
-LPMouse = Lplayer:GetMouse()
+LPlayer = Players.LocalPlayer
+GSWorks = game:GetService("Workspace")
+GSViman = game:GetService("VirtualInputManager")
 
-toggleGui = false
-Tptoggle = false
-Bringtoggle = false
-TpClicktoggle = false
-ChatLogtoggle = false
-
-function Output(Player, Message)
-	if not ChatLogtoggle then return end
-    print(Player.Name .. ": " .. Message)
-end
-
-for i,v in pairs(game.Players:GetChildren()) do
-    v.Chatted:Connect(function(Message)
-        Output(v, Message)
-    end)
-end
- 
-game.Players.ChildAdded:Connect(function(Player)
-    if Player:IsA("Player") then
-        Player.Chatted:Connect(function(Message)
-            Output(Player, Message)
-        end)
-    end
-end)
-
-CreditTo.MouseButton1Down:connect(function()
-	Credit.Visible = true
-end)
-
-CreditClose.MouseButton1Down:connect(function()
-	Credit.Visible = false
-end)
-
-HideGui.MouseButton1Down:connect(function()
-	TpandBringKillFrame.Visible = false
-end)
-
-CloseNovabFrameC.MouseButton1Down:connect(function()
-	CloseNovabFrame.Visible = false
-	FrameGui.Visible = true
-end)
-
-CloseYes.MouseButton1Down:connect(function()
-	NovabScreenGui:Destroy()
-end)
-
-CloseNo.MouseButton1Down:connect(function()
-	CloseNovabFrame.Visible = false
-	FrameGui.Visible = true
-end)
-
-CloseNovabGui.MouseButton1Down:connect(function()
-	CloseNovabFrame.Visible = true
-	FrameGui.Visible = false
-end)
-
-NameText.FocusLost:connect(function(enterPressed)
-    if enterPressed then
-		if string.sub(NameText.Text, 1) == "all" then
-			print("all")
-			NameText.PlaceholderText = "all"
-			PlayerName.Text = "All Players"
-		else
-			for i, v in pairs(GetPlayer(string.sub(NameText.Text, 1))) do
-				print(v.Name)
-				PlayerName.Text = ("Name is "..v.Name)
-				NameText.PlaceholderText = (""..v.Name)
-			end
-		end
-	end
-	NameText.Text = ""
-end)
+BankOut = CFrame.new(44, 20, 763)
+BankIn = CFrame.new(30, 20, 848)
+JewOut = CFrame.new(136, 20, 1368)
+JewIn = CFrame.new(132, 20, 1329)
+CityBase = CFrame.new(-240, 20, 1619)
+VolcanoBase = CFrame.new(1638, 55, -1767)
+Port = CFrame.new(-439, 25, 2027)
+Museum = CFrame.new(1075, 136, 1228)
+PowerPlant = CFrame.new(609, 40, 2416)
+Airport = CFrame.new(-1297, 45, 2844)
+Jetpack = CFrame.new(1367, 168, 2613)
+GunShop = CFrame.new(-26, 20, -1805)
+DonutShop = CFrame.new(327, 20, -1762)
+GasStation = CFrame.new(-1516, 20, 687)
+CityGarage = CFrame.new(-388, 20, 1242)
+SmallGarage = CFrame.new(826, 20, -1450)
+MilitaryBase = CFrame.new(773, 20, -366)
+CityPolice = CFrame.new(704, 45, 1064)
+JailPolice = CFrame.new(-1217, 20, -1523)
+JailYard = CFrame.new(-1219,  20, -1758)
+BoatCave = CFrame.new(1870, 35, 1897)
+Server = CFrame.new(55, 20, 1152)
 
 function GetPlayer(String)
     local Found = {}
@@ -804,146 +728,453 @@ function GetPlayer(String)
     return Found
 end
 
-game:GetService("RunService").Stepped:connect(function()
-	if string.sub(NameText.PlaceholderText, 1) == "all" then
-		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Name ~= Lplayer.Name then
-				if Tptoggle then
-					Lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
-				end
-				if Bringtoggle then
-					game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame = Lplayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -3)
-				end
+NameText.FocusLost:connect(function(enterPressed)
+    if enterPressed then
+		for i, v in pairs(GetPlayer(string.sub(NameText.Text, 1))) do
+			print(v.Name)
+			if TpMethod1Toggle == true then
+				Tp2(game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame)
+			end
+			if TpMethod2Toggle == true then
+				Tp1(game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame)
 			end
 		end
+	end
+	NameText.Text = ""
+	NameText.PlaceholderText = "Enter a Name"
+end)
+
+PositionTP = nil
+
+Car = "Camaro"
+
+CloseJailBreakGui.MouseButton1Down:connect(function()
+	NovabScreenGui:Destroy()
+end)
+
+HideJailBreakGui.MouseButton1Down:connect(function()
+	JailBreakGui.Visible = false
+	toggleGui = false
+end)
+
+function SettingsX()
+	if SettingsToggle == false then
+		SelectTpOne.Visible = false
+		SelectTpTwo.Visible = false
+		MicFrame.Visible = false
+		TeleportFrame.Visible = false
+		HowTp.Visible = false
+		TeleportPartOne.Visible = false
+		TeleportPartTwo.Visible = false
+		TeleportFrameTwo.Visible = false
+        SettingsToggle = true
+		SettingsFrame.Visible = true
+        n = 0
+		while wait() do
+			n = n + 10
+			Settings.Rotation = n
+            if n == 90 then
+                break
+            end
+        end
 	else
-		for i, v in pairs(GetPlayer(string.sub(NameText.PlaceholderText, 1))) do
-			if Tptoggle then
-				Lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
-			end
-			if Bringtoggle then
-				game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame = Lplayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -3)
-			end
+        SettingsToggle = false
+		SettingsFrame.Visible = false
+        n = 90
+		while wait() do
+			n = n - 10
+			Settings.Rotation = n
+            if n == 0 then
+                break
+            end
+        end
+	end
+end
+
+Settings.MouseButton1Down:connect(SettingsX)
+
+MicButton.MouseButton1Down:connect(function()
+	SettingsFrame.Visible = false
+	SelectTpOne.Visible = false
+	SelectTpTwo.Visible = false
+	MicFrame.Visible = true
+	TeleportFrame.Visible = false
+	HowTp.Visible = false
+	TeleportPartOne.Visible = false
+	TeleportPartTwo.Visible = false
+	TeleportFrameTwo.Visible = false
+end)
+
+NowaitE.MouseButton1Down:connect(function()
+	local UI = require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI"))
+	while wait() do
+		for i, v in pairs(UI.CircleAction.Specs) do
+			v.Duration = 0
+			v.Timed = true
 		end
 	end
 end)
 
-function TpClick()
-    if Tptoggle == false then
-        Tptoggle = true
-        TpButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-        TpText.Text = "Tp is  is activated"
-        TpText.TextColor3 = Color3.fromRGB(0, 255, 0)
-        Bringtoggle = false
-        BringKillButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        BringKillText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        BringKillText.Text = "BringKill is  is deactivated"
+JetpackGive.MouseButton1Down:connect(function()
+	local NOW = GSWorks.TouchTrigger.JetPackGiver.CFrame
+	wait(0.1)
+	GSWorks.TouchTrigger.JetPackGiver.CFrame = LPlayer.Character.HumanoidRootPart.CFrame
+	wait(0.5)
+	GSWorks.TouchTrigger.JetPackGiver.CFrame = NOW
+end)
+
+GiveDonut.MouseButton1Down:connect(function()
+	local NOW = GSWorks.TouchTrigger.Donut.CFrame
+	wait(0.1)
+	GSWorks.TouchTrigger.Donut.CFrame = LPlayer.Character.HumanoidRootPart.CFrame
+	wait(0.5)
+	GSWorks.TouchTrigger.Donut.CFrame = NOW
+end)
+
+function TpMethod1()
+    if TpMethod1Toggle == false then
+        TpMethod1Toggle = true
+		TpMethod2Toggle = false
+		SelectTpOne.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+		SelectTpTwo.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        HowTp.Text = "TpMethod 1"
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "JailBreak Gui";
+			Text = "Tp with Camaro";
+		})
     else
-        Tptoggle = false
-        TpButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        TpText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        TpText.Text = "Tp is  is deactivated"
+        TpMethod1Toggle = false
+		HowTp.Text = "No selection"
+		SelectTpOne.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     end
 end
 
-TpButton.MouseButton1Down:connect(TpClick)
+SelectTpOne.MouseButton1Down:connect(TpMethod1)
 
-function BringClick()
-    if Bringtoggle == false then
-        Bringtoggle = true
-        BringKillButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-        BringKillText.TextColor3 = Color3.fromRGB(0, 255, 0)
-        BringKillText.Text = "BringKill is  is activated"
-        Tptoggle = false
-        TpText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        TpButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        TpText.Text = "Tp is  is deactivated"
+function TpMethod2()
+    if TpMethod2Toggle == false then
+        TpMethod2Toggle = true
+		TpMethod1Toggle = false
+		SelectTpOne.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		SelectTpTwo.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+        HowTp.Text = "TpMethod 2"
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "JailBreak Gui";
+			Text = "Tp with your vehicle";
+		})
     else
-        Bringtoggle = false
-        BringKillButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        BringKillText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        BringKillText.Text = "BringKill is  is deactivated"
+        TpMethod2Toggle = false
+		HowTp.Text = "No  selection"
+		SelectTpTwo.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
     end
 end
 
-BringKillButton.MouseButton1Down:connect(BringClick)
+SelectTpTwo.MouseButton1Down:connect(TpMethod2)
 
-function ClickTp()
-    if TpClicktoggle == false then
-        TpClicktoggle = true
-        TpClickButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-        ClickTpText.TextColor3 = Color3.fromRGB(0, 255, 0)
-        ClickTpText.Text = "CtrlClickTp is activated"
-    else
-        TpClicktoggle = false
-        TpClickButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        ClickTpText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        ClickTpText.Text = "CtrlClickTp is deactivated"
-    end
-end
+Teleport.MouseButton1Down:connect(function()
+	SettingsFrame.Visible = false
+	SelectTpOne.Visible = true
+	SelectTpTwo.Visible = true
+	TeleportFrame.Visible = true
+	HowTp.Visible = true
+	TeleportFrameTwo.Visible = false
+	TeleportPartTwo.Visible = true
+	TeleportPartOne.Visible = false
+	MicFrame.Visible = false
+end)
 
-TpClickButton.MouseButton1Down:connect(ClickTp)
+Main.MouseButton1Down:connect(function()
+	SettingsFrame.Visible = false
+	SelectTpOne.Visible = false
+	SelectTpTwo.Visible = false
+	TeleportFrame.Visible = false
+	HowTp.Visible = false
+	TeleportPartOne.Visible = false
+	TeleportPartTwo.Visible = false
+	TeleportFrameTwo.Visible = false
+	MicFrame.Visible = false
+end)
 
-function CloseClick()
-	TpandBringKillFrame:remove()
-	Check:remove()
-	TpClicktoggle = false
-	Bringtoggle = false
-	Tptoggle = false
-	FrameGui.Visible = true
-end
-
-CloseGui.MouseButton1Down:connect(CloseClick)
-
-function ChatLogging()
-	if ChatLogtoggle == false then
-        ChatLogtoggle = true
-        ChatLog.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-        ChatLogText.TextColor3 = Color3.fromRGB(0, 255, 0)
-        ChatLogText.Text = "ChatLog is activated"
-    else
-        ChatLogtoggle = false
-        ChatLog.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        ChatLogText.TextColor3 = Color3.fromRGB(255, 0, 0)
-        ChatLogText.Text = "ChatLog is deactivated"
+function FindAirdrop()
+	if workspace:FindFirstChild("Drop") then
+		if TpMethod1Toggle == true then
+			Tp2(game.workspace.Drop.Briefcase.CFrame)
+		end
+		if TpMethod2Toggle == true then
+			Tp1(game.workspace.Drop.Briefcase.CFrame)
+		end
+	end
+	if not workspace:FindFirstChild("Drop") then
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "JailBreak Gui";
+			Text = "There aren't Airdrop";
+		})
 	end
 end
 
-ChatLog.MouseButton1Down:connect(ChatLogging)
+AirdropButton.MouseButton1Down:connect(FindAirdrop)
+
+TeleportPartOne.MouseButton1Down:connect(function()
+	TeleportPartOne.Visible = false
+	TeleportPartTwo.Visible = true
+	TeleportFrame.Visible = true
+	TeleportFrameTwo.Visible = false
+end)
+	
+TeleportPartTwo.MouseButton1Down:connect(function()
+	TeleportPartTwo.Visible = false
+	TeleportFrame.Visible = false
+	TeleportFrameTwo.Visible = true
+	TeleportPartOne.Visible = true
+end)
+
+function Tp1(PositionTP)
+	for i, v in ipairs(workspace.Vehicles:GetChildren()) do
+		if v.Seat.PlayerName.Value == LPlayer.Name then
+			v:SetPrimaryPartCFrame(PositionTP)
+		end
+	end
+end
+
+function Tp2(PositionTP)
+	if GSWorks.Vehicles[Car]:FindFirstChild("Engine") and GSWorks.Vehicles[Car]:FindFirstChild("Seat") and GSWorks.Vehicles[Car].Seat:FindFirstChild("Weld") and GSWorks.Vehicles[Car].Seat:FindFirstChild("Player") then
+		if GSWorks.Vehicles[Car].Seat.PlayerName.Value == LPlayer.Name then
+			GSWorks.Vehicles[Car]:SetPrimaryPartCFrame(PositionTP)
+		elseif GSWorks.Vehicles[Car].Seat.Player.Value == false then
+			GSViman:SendKeyEvent(true, "E", false, game)
+			wait(0.5)
+			GSWorks.Vehicles[Car]:SetPrimaryPartCFrame(LPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(5, 0, 0))
+			wait(0)
+			workspace.CurrentCamera.CFrame = GSWorks.Vehicles[Car].Seat.CFrame * CFrame.new(-5, 5, 0)
+			wait(0.2)
+			if LPlayer.PlayerGui.MainGui.CircleAction.Visible then
+				GSViman:SendKeyEvent(true, "E", false, game)
+				wait(0.5)
+				if GSWorks.Vehicles[Car].Seat.PlayerName.Value == LPlayer.Name then
+					GSWorks.Vehicles[Car]:SetPrimaryPartCFrame(PositionTP)
+				end
+			end
+		end
+	end
+end
+
+BankOutButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(BankOut)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(BankOut)
+	end
+end)
+
+BankInButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(BankIn)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(BankIn)
+	end
+end)
+
+JewOutButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(JewOut)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(JewOut)
+	end
+end)
+
+JewInButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(JewIn)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(JewIn)
+	end
+end)
+
+CityBaseButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(CityBase)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(CityBase)
+	end
+end)
+
+VolcanoBaseButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(VolcanoBase)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(VolcanoBase)
+	end
+end)
+
+PortButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(Port)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(Port)
+	end
+end)
+
+MuseumButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(Museum)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(Museum)
+	end
+end)
+
+PowerPlantButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(PowerPlant)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(PowerPlant)
+	end
+end)
+
+AirportButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(Airport)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(Airport)
+	end
+end)
+
+JetpackButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(Jetpack)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(Jetpack)
+	end
+end)
+
+GunShopButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(GunShop)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(GunShop)
+	end
+end)
+
+DonutShopButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(DonutShop)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(DonutShop)
+	end
+end)
+
+GasStationButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(GasStation)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(GasStation)
+	end
+end)
+
+CityGarageButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(CityGarage)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(CityGarage)
+	end
+end)
+
+SmallGarageButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(SmallGarage)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(SmallGarage)
+	end
+end)
+
+MilitaryButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(MilitaryBase)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(MilitaryBase)
+	end
+end)
+
+CityPoliceButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(CityPolice)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(CityPolice)
+	end
+end)
+
+JailPoliceButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(JailPolice)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(JailPolice)
+	end
+end)
+
+JailYardButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(JailYard)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(JailYard)
+	end
+end)
+
+BoatCaveButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(BoatCave)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(BoatCave)
+	end
+end)
+
+ServerButton.MouseButton1Down:connect(function()
+	if TpMethod1Toggle == true then
+		Tp2(Server)
+	end
+	if TpMethod2Toggle == true then
+		Tp1(Server)
+	end
+end)
 
 function onKeyPress(actionName, userInputState, inputObject)
     if userInputState == Enum.UserInputState.Begin then
         print("P was pressed")
         if toggleGui == false then
             toggleGui = true
-            TpandBringKillFrame.Visible = true
+            JailBreakGui.Visible = true
         else
             toggleGui = false
-            TpandBringKillFrame.Visible = false
+            JailBreakGui.Visible = false
         end
     end
 end
 
 game.ContextActionService:BindAction("keyPress", onKeyPress, false, Enum.KeyCode.P)
 
-LPMouse.Button1Down:connect(function()
-	if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-	if not LPMouse.Target then return end
-	if TpClicktoggle == true then
-		Lplayer.Character:MoveTo(LPMouse.Hit.p)
-	end
-end)
-
 game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Novab Hub";
-    Text = "Script is loaded";
+	Title = "JailBreak Gui";
+	Text = "Press P to show/hide gui.";
 })
-
-game:GetService("StarterGui"):SetCore("SendNotification", {
-    Title = "Novab Hub";
-    Text = "Novab Hub (Beta 0.0.1)";
-})
-
 
 function zigzag(X)
 	return math.acos(math.cos(X * math.pi)) / math.pi
@@ -952,8 +1183,7 @@ end
 counter = 0
 
 while wait(0.1) do
-	NovabHub.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
-	PlayerName.TextColor3  = Color3.fromHSV(zigzag(counter), 1, 1)
-	CreditText2.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
+	HomePart.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
+	HowTp.TextColor3 = Color3.fromHSV(zigzag(counter), 1, 1)
 	counter = counter + 0.01
 end
