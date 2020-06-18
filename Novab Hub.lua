@@ -65,7 +65,7 @@ while wait(0.01) do
 end
 wait(3.5)
 Intro:TweenSize(UDim2.new(0, 1, 0, 1))
-wait(0.25)
+wait(0.1)
 Intro:TweenPosition(UDim2.new(0, 0, 2, 0), "Out", "Elastic", 2)
 wait(1.5)
 Intro:Destroy()
