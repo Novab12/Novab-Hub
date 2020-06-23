@@ -7,6 +7,7 @@ local TeleportFrameTwo = Instance.new("Frame")
 local ScriptFrame = Instance.new("Frame")
 local SettingsFrame = Instance.new("Frame")
 local NameText = Instance.new("TextBox")
+local Arrest = Instance.new("TextBox")
 local JetpackGive = Instance.new("TextButton")
 local MicButton = Instance.new("TextButton")
 local NowaitE = Instance.new("TextButton")
@@ -161,7 +162,7 @@ NowaitE.BackgroundTransparency = 0.156
 NowaitE.BorderSizePixel = 1
 NowaitE.BorderColor3 = Color3.fromRGB(65, 65, 65)
 NowaitE.Position = UDim2.new(0.05, 0, 0.1, 0)
-NowaitE.Size = UDim2.new(0, 60, 0, 25)
+NowaitE.Size = UDim2.new(0, 65, 0, 30)
 NowaitE.Font = Enum.Font.SourceSans
 NowaitE.TextColor3 = Color3.fromRGB(255, 255, 255)
 NowaitE.TextSize = 14
@@ -176,7 +177,7 @@ GiveDonut.BackgroundTransparency = 0.156
 GiveDonut.BorderSizePixel = 1
 GiveDonut.BorderColor3 = Color3.fromRGB(65, 65, 65)
 GiveDonut.Position = UDim2.new(0.38, 0, 0.1, 0)
-GiveDonut.Size = UDim2.new(0, 60, 0, 25)
+GiveDonut.Size = UDim2.new(0, 65, 0, 30)
 GiveDonut.Font = Enum.Font.SourceSans
 GiveDonut.TextColor3 = Color3.fromRGB(255, 255, 255)
 GiveDonut.TextSize = 14
@@ -191,7 +192,7 @@ JetpackGive.BackgroundTransparency = 0.156
 JetpackGive.BorderSizePixel = 1
 JetpackGive.BorderColor3 = Color3.fromRGB(65, 65, 65)
 JetpackGive.Position = UDim2.new(0.704, 0, 0.1, 0)
-JetpackGive.Size = UDim2.new(0, 60, 0, 25)
+JetpackGive.Size = UDim2.new(0, 65, 0, 30)
 JetpackGive.Font = Enum.Font.SourceSans
 JetpackGive.TextColor3 = Color3.fromRGB(255, 255, 255)
 JetpackGive.TextSize = 12
@@ -206,7 +207,7 @@ BankOutButton.BackgroundTransparency = 0.156
 BankOutButton.BorderSizePixel = 1
 BankOutButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 BankOutButton.Position = UDim2.new(0.05, 0, 0.1, 0)
-BankOutButton.Size = UDim2.new(0, 60, 0, 25)
+BankOutButton.Size = UDim2.new(0, 65, 0, 30)
 BankOutButton.Font = Enum.Font.SourceSans
 BankOutButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 BankOutButton.TextSize = 14
@@ -221,7 +222,7 @@ BankInButton.BackgroundTransparency = 0.156
 BankInButton.BorderSizePixel = 1
 BankInButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 BankInButton.Position = UDim2.new(0.38, 0, 0.1, 0)
-BankInButton.Size = UDim2.new(0, 60, 0, 25)
+BankInButton.Size = UDim2.new(0, 65, 0, 30)
 BankInButton.Font = Enum.Font.SourceSans
 BankInButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 BankInButton.TextSize = 14
@@ -236,7 +237,7 @@ JewOutButton.BackgroundTransparency = 0.156
 JewOutButton.BorderSizePixel = 1
 JewOutButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 JewOutButton.Position = UDim2.new(0.704, 0, 0.1, 0)
-JewOutButton.Size = UDim2.new(0, 60, 0, 25)
+JewOutButton.Size = UDim2.new(0, 65, 0, 30)
 JewOutButton.Font = Enum.Font.SourceSans
 JewOutButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 JewOutButton.TextSize = 14
@@ -250,8 +251,8 @@ JewInButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 JewInButton.BackgroundTransparency = 0.156
 JewInButton.BorderSizePixel = 1
 JewInButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-JewInButton.Position = UDim2.new(0.05, 0, 0.307, 0)
-JewInButton.Size = UDim2.new(0, 60, 0, 25)
+JewInButton.Position = UDim2.new(0.05, 0, 0.3, 0)
+JewInButton.Size = UDim2.new(0, 65, 0, 30)
 JewInButton.Font = Enum.Font.SourceSans
 JewInButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 JewInButton.TextSize = 14
@@ -265,8 +266,8 @@ CityBaseButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 CityBaseButton.BackgroundTransparency = 0.156
 CityBaseButton.BorderSizePixel = 1
 CityBaseButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-CityBaseButton.Position = UDim2.new(0.38, 0, 0.307, 0)
-CityBaseButton.Size = UDim2.new(0, 60, 0, 25)
+CityBaseButton.Position = UDim2.new(0.38, 0, 0.3, 0)
+CityBaseButton.Size = UDim2.new(0, 65, 0, 30)
 CityBaseButton.Font = Enum.Font.SourceSans
 CityBaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CityBaseButton.TextSize = 14
@@ -280,8 +281,8 @@ VolcanoBaseButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 VolcanoBaseButton.BackgroundTransparency = 0.156
 VolcanoBaseButton.BorderSizePixel = 1
 VolcanoBaseButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-VolcanoBaseButton.Position = UDim2.new(0.704, 0, 0.307, 0)
-VolcanoBaseButton.Size = UDim2.new(0, 60, 0, 25)
+VolcanoBaseButton.Position = UDim2.new(0.704, 0, 0.3, 0)
+VolcanoBaseButton.Size = UDim2.new(0, 65, 0, 30)
 VolcanoBaseButton.Font = Enum.Font.SourceSans
 VolcanoBaseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 VolcanoBaseButton.TextSize = 12
@@ -295,8 +296,8 @@ PortButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 PortButton.BackgroundTransparency = 0.156
 PortButton.BorderSizePixel = 1
 PortButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-PortButton.Position = UDim2.new(0.05, 0, 0.527, 0)
-PortButton.Size = UDim2.new(0, 60, 0, 25)
+PortButton.Position = UDim2.new(0.05, 0, 0.5, 0)
+PortButton.Size = UDim2.new(0, 65, 0, 30)
 PortButton.Font = Enum.Font.SourceSans
 PortButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 PortButton.TextSize = 14
@@ -310,8 +311,8 @@ MuseumButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 MuseumButton.BackgroundTransparency = 0.156
 MuseumButton.BorderSizePixel = 1
 MuseumButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-MuseumButton.Position = UDim2.new(0.38, 0, 0.527, 0)
-MuseumButton.Size = UDim2.new(0, 60, 0, 25)
+MuseumButton.Position = UDim2.new(0.38, 0, 0.5, 0)
+MuseumButton.Size = UDim2.new(0, 65, 0, 30)
 MuseumButton.Font = Enum.Font.SourceSans
 MuseumButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 MuseumButton.TextSize = 14
@@ -325,8 +326,8 @@ PowerPlantButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 PowerPlantButton.BackgroundTransparency = 0.156
 PowerPlantButton.BorderSizePixel = 1
 PowerPlantButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-PowerPlantButton.Position = UDim2.new(0.704, 0, 0.527, 0)
-PowerPlantButton.Size = UDim2.new(0, 60, 0, 25)
+PowerPlantButton.Position = UDim2.new(0.704, 0, 0.5, 0)
+PowerPlantButton.Size = UDim2.new(0, 65, 0, 30)
 PowerPlantButton.Font = Enum.Font.SourceSans
 PowerPlantButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 PowerPlantButton.TextSize = 14
@@ -340,8 +341,8 @@ AirportButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 AirportButton.BackgroundTransparency = 0.156
 AirportButton.BorderSizePixel = 1
 AirportButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-AirportButton.Position = UDim2.new(0.05, 0, 0.755, 0)
-AirportButton.Size = UDim2.new(0, 60, 0, 25)
+AirportButton.Position = UDim2.new(0.03, 0, 0.7, 0)
+AirportButton.Size = UDim2.new(0, 65, 0, 30)
 AirportButton.Font = Enum.Font.SourceSans
 AirportButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 AirportButton.TextSize = 14
@@ -355,8 +356,8 @@ JetpackButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 JetpackButton.BackgroundTransparency = 0.156
 JetpackButton.BorderSizePixel = 1
 JetpackButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-JetpackButton.Position = UDim2.new(0.38, 0, 0.755, 0)
-JetpackButton.Size = UDim2.new(0, 60, 0, 25)
+JetpackButton.Position = UDim2.new(0.30, 0, 0.7, 0)
+JetpackButton.Size = UDim2.new(0, 65, 0, 30)
 JetpackButton.Font = Enum.Font.SourceSans
 JetpackButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 JetpackButton.TextSize = 14
@@ -370,8 +371,8 @@ GunShopButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 GunShopButton.BackgroundTransparency = 0.156
 GunShopButton.BorderSizePixel = 1
 GunShopButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
-GunShopButton.Position = UDim2.new(0.704, 0, 0.755, 0)
-GunShopButton.Size = UDim2.new(0, 60, 0, 25)
+GunShopButton.Position = UDim2.new(0.6, 0, 0.7, 0)
+GunShopButton.Size = UDim2.new(0, 65, 0, 30)
 GunShopButton.Font = Enum.Font.SourceSans
 GunShopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 GunShopButton.TextSize = 14
@@ -386,7 +387,7 @@ DonutShopButton.BackgroundTransparency = 0.156
 DonutShopButton.BorderSizePixel = 1
 DonutShopButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 DonutShopButton.Position = UDim2.new(0.05, 0, 0.1, 0)
-DonutShopButton.Size = UDim2.new(0, 60, 0, 25)
+DonutShopButton.Size = UDim2.new(0, 65, 0, 30)
 DonutShopButton.Font = Enum.Font.SourceSans
 DonutShopButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 DonutShopButton.TextSize = 14
@@ -401,7 +402,7 @@ GasStationButton.BackgroundTransparency = 0.156
 GasStationButton.BorderSizePixel = 1
 GasStationButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 GasStationButton.Position = UDim2.new(0.38, 0, 0.1, 0)
-GasStationButton.Size = UDim2.new(0, 60, 0, 25)
+GasStationButton.Size = UDim2.new(0, 65, 0, 30)
 GasStationButton.Font = Enum.Font.SourceSans
 GasStationButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 GasStationButton.TextSize = 14
@@ -416,7 +417,7 @@ CityGarageButton.BackgroundTransparency = 0.156
 CityGarageButton.BorderSizePixel = 1
 CityGarageButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 CityGarageButton.Position = UDim2.new(0.704, 0, 0.1, 0)
-CityGarageButton.Size = UDim2.new(0, 60, 0, 25)
+CityGarageButton.Size = UDim2.new(0, 65, 0, 30)
 CityGarageButton.Font = Enum.Font.SourceSans
 CityGarageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CityGarageButton.TextSize = 14
@@ -431,7 +432,7 @@ SmallGarageButton.BackgroundTransparency = 0.156
 SmallGarageButton.BorderSizePixel = 1
 SmallGarageButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 SmallGarageButton.Position = UDim2.new(0.05, 0, 0.307, 0)
-SmallGarageButton.Size = UDim2.new(0, 60, 0, 25)
+SmallGarageButton.Size = UDim2.new(0, 65, 0, 30)
 SmallGarageButton.Font = Enum.Font.SourceSans
 SmallGarageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 SmallGarageButton.TextSize = 14
@@ -446,7 +447,7 @@ MilitaryButton.BackgroundTransparency = 0.156
 MilitaryButton.BorderSizePixel = 1
 MilitaryButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 MilitaryButton.Position = UDim2.new(0.38, 0, 0.307, 0)
-MilitaryButton.Size = UDim2.new(0, 60, 0, 25)
+MilitaryButton.Size = UDim2.new(0, 65, 0, 30)
 MilitaryButton.Font = Enum.Font.SourceSans
 MilitaryButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 MilitaryButton.TextSize = 14
@@ -461,7 +462,7 @@ CityPoliceButton.BackgroundTransparency = 0.156
 CityPoliceButton.BorderSizePixel = 1
 CityPoliceButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 CityPoliceButton.Position = UDim2.new(0.704, 0, 0.307, 0)
-CityPoliceButton.Size = UDim2.new(0, 60, 0, 25)
+CityPoliceButton.Size = UDim2.new(0, 65, 0, 30)
 CityPoliceButton.Font = Enum.Font.SourceSans
 CityPoliceButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CityPoliceButton.TextSize = 14
@@ -476,7 +477,7 @@ JailPoliceButton.BackgroundTransparency = 0.156
 JailPoliceButton.BorderSizePixel = 1
 JailPoliceButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 JailPoliceButton.Position = UDim2.new(0.05, 0, 0.527, 0)
-JailPoliceButton.Size = UDim2.new(0, 60, 0, 25)
+JailPoliceButton.Size = UDim2.new(0, 65, 0, 30)
 JailPoliceButton.Font = Enum.Font.SourceSans
 JailPoliceButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 JailPoliceButton.TextSize = 14
@@ -491,7 +492,7 @@ JailYardButton.BackgroundTransparency = 0.156
 JailYardButton.BorderSizePixel = 1
 JailYardButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 JailYardButton.Position = UDim2.new(0.38, 0, 0.527, 0)
-JailYardButton.Size = UDim2.new(0, 60, 0, 25)
+JailYardButton.Size = UDim2.new(0, 65, 0, 30)
 JailYardButton.Font = Enum.Font.SourceSans
 JailYardButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 JailYardButton.TextSize = 14
@@ -506,7 +507,7 @@ BoatCaveButton.BackgroundTransparency = 0.156
 BoatCaveButton.BorderSizePixel = 1
 BoatCaveButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 BoatCaveButton.Position = UDim2.new(0.704, 0, 0.527, 0)
-BoatCaveButton.Size = UDim2.new(0, 60, 0, 25)
+BoatCaveButton.Size = UDim2.new(0, 65, 0, 30)
 BoatCaveButton.Font = Enum.Font.SourceSans
 BoatCaveButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 BoatCaveButton.TextSize = 14
@@ -521,7 +522,7 @@ ServerButton.BackgroundTransparency = 0.156
 ServerButton.BorderSizePixel = 1
 ServerButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 ServerButton.Position = UDim2.new(0.05, 0, 0.755, 0)
-ServerButton.Size = UDim2.new(0, 60, 0, 25)
+ServerButton.Size = UDim2.new(0, 65, 0, 30)
 ServerButton.Font = Enum.Font.SourceSans
 ServerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ServerButton.TextSize = 14
@@ -536,7 +537,7 @@ AirdropButton.BackgroundTransparency = 0.156
 AirdropButton.BorderSizePixel = 1
 AirdropButton.BorderColor3 = Color3.fromRGB(65, 65, 65)
 AirdropButton.Position = UDim2.new(0.38, 0, 0.755, 0)
-AirdropButton.Size = UDim2.new(0, 60, 0, 25)
+AirdropButton.Size = UDim2.new(0, 65, 0, 30)
 AirdropButton.Font = Enum.Font.SourceSans
 AirdropButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 AirdropButton.TextSize = 14
@@ -551,7 +552,7 @@ NameText.BackgroundTransparency = 0.156
 NameText.BorderSizePixel = 1
 NameText.BorderColor3 = Color3.fromRGB(65, 65, 65)
 NameText.Position = UDim2.new(0.704, 0, 0.755, 0)
-NameText.Size = UDim2.new(0, 60, 0, 25)
+NameText.Size = UDim2.new(0, 65, 0, 30)
 NameText.Font = Enum.Font.SourceSans
 NameText.TextColor3 = Color3.fromRGB(255, 255, 255)
 NameText.TextSize = 12
@@ -560,6 +561,23 @@ NameText.TextWrapped = true
 NameText.PlaceholderColor3 = Color3.fromRGB(170, 170, 170)
 NameText.PlaceholderText = "Enter a Name"
 NameText.Text = ""
+
+Arrest.Name = "Arrest"
+Arrest.Parent = JailBreakGui
+Arrest.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Arrest.BackgroundTransparency = 0.156
+Arrest.BorderSizePixel = 1
+Arrest.Position = UDim2.new(0.38, 0, 0.15, 0)
+Arrest.Size = UDim2.new(0, 60, 0, 30)
+Arrest.Font = Enum.Font.SourceSans
+Arrest.TextColor3 = Color3.fromHSV(255, 1, 1)
+Arrest.TextSize = 17
+Arrest.TextTransparency = 0.169
+Arrest.TextWrapped = true
+Arrest.PlaceholderColor3 = Color3.fromRGB(170, 170, 170)
+Arrest.PlaceholderText = "Arrest Name"
+Arrest.Visible = false
+Arrest.Text = ""
 
 TeleportPartOne.Name = "TeleportPartOne"
 TeleportPartOne.Parent = TeleportFrameTwo
@@ -744,6 +762,36 @@ NameText.FocusLost:connect(function(enterPressed)
 	NameText.PlaceholderText = "Enter a Name"
 end)
 
+Arrest.FocusLost:connect(function(enterPressed)
+    if enterPressed then
+		local NOW = LPlayer.Character.HumanoidRootPart.CFrame
+		for i, v in pairs(GetPlayer(string.sub(Arrest.Text, 1))) do
+			if game:GetService("Players")[v.Name].TeamValue.Value == "Criminal" then
+				GSViman:SendKeyEvent(true, "Specs", false, game)
+				wait(0)
+				GSViman:SendKeyEvent(false, "Specs", false, game)
+				wait(0)
+				Tp2(game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame)
+				n = 0
+				repeat
+					n = n + 0.5
+					LPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame + game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame.lockVector * -3
+					wait(0)
+					GSViman:SendKeyEvent(true, "E", false, game)
+				until n == 3
+				wait(0.5)
+				Tp2(NOW)
+			elseif game:GetService("Players")[v.Name].TeamValue.Value ~= "Criminal" then
+				game:GetService("StarterGui"):SetCore("SendNotification", {
+					Title = "JailBreak Gui";
+					Text = "Target isn't Criminal";
+				})
+			end
+		end
+	end
+	Arrest.Text = ""
+end)
+
 PositionTP = nil
 
 Car = "Camaro"
@@ -764,6 +812,7 @@ function SettingsX()
 		MicFrame.Visible = false
 		TeleportFrame.Visible = false
 		HowTp.Visible = false
+		Arrest.Visible = false
 		TeleportPartOne.Visible = false
 		TeleportPartTwo.Visible = false
 		TeleportFrameTwo.Visible = false
@@ -794,6 +843,7 @@ end
 Settings.MouseButton1Down:connect(SettingsX)
 
 MicButton.MouseButton1Down:connect(function()
+	Arrest.Visible = true
 	SettingsFrame.Visible = false
 	SelectTpOne.Visible = false
 	SelectTpTwo.Visible = false
@@ -872,6 +922,7 @@ end
 SelectTpTwo.MouseButton1Down:connect(TpMethod2)
 
 Teleport.MouseButton1Down:connect(function()
+	Arrest.Visible = false
 	SettingsFrame.Visible = false
 	SelectTpOne.Visible = true
 	SelectTpTwo.Visible = true
@@ -884,6 +935,7 @@ Teleport.MouseButton1Down:connect(function()
 end)
 
 Main.MouseButton1Down:connect(function()
+	Arrest.Visible = false
 	SettingsFrame.Visible = false
 	SelectTpOne.Visible = false
 	SelectTpTwo.Visible = false
@@ -907,7 +959,7 @@ function FindAirdrop()
 	if not workspace:FindFirstChild("Drop") then
 		game:GetService("StarterGui"):SetCore("SendNotification", {
 			Title = "JailBreak Gui";
-			Text = "There aren't Airdrop";
+			Text = "There isn't Airdrop";
 		})
 	end
 end
@@ -919,6 +971,7 @@ TeleportPartOne.MouseButton1Down:connect(function()
 	TeleportPartTwo.Visible = true
 	TeleportFrame.Visible = true
 	TeleportFrameTwo.Visible = false
+	
 end)
 	
 TeleportPartTwo.MouseButton1Down:connect(function()
@@ -1175,6 +1228,12 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "JailBreak Gui";
 	Text = "Press P to show/hide gui.";
 })
+
+if require(game:GetService("ReplicatedStorage").Module:WaitForChild("UI")) then
+	print("Activated")
+else
+    NowaitE:Remove()
+end
 
 function zigzag(X)
 	return math.acos(math.cos(X * math.pi)) / math.pi
