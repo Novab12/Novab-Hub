@@ -1,6 +1,6 @@
 # Novab-Hub
 
-Use Full-Lua Executor or Premium Executor only.
+Made for Full-Lua Executor.
 
 You can copy, repeat and edit.
 
